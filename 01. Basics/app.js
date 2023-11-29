@@ -113,10 +113,15 @@
 // } while ( i <= 400);
 
 
+const fruits = [
+    'apples',
+    'bananas',
+    'mango',
+    'pinapple',
+]
 
-
-
-
+console.log(fruits.length)
+fruits.pop;
 
 
 
