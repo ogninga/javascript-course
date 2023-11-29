@@ -113,15 +113,97 @@
 // } while ( i <= 400);
 
 
-const fruits = [
-    'apples',
-    'bananas',
-    'mango',
-    'pinapple',
-]
+// const fruits = [
+//     'apples',
+//     'bananas',
+//     'mango',
+//     'pinapple',
+// ]
 
-console.log(fruits.length)
-fruits.pop;
+// console.log(fruits.length)
+// fruits.pop;
+
+
+// Objects
+
+// const person = {
+//     key: value
+// }
+
+
+// const person = {
+//     firstName: "Hugo",
+//     lastName: "Bosded",
+//     age: 19,
+//     location: ['plant', 'Earth'],
+//     isProgrammer: true,
+// };
+
+// console.log(person)
+
+// //accessing object
+
+// //dot notation
+// console.log(person.age);
+
+// //bracket notation needs quotes in brakcets
+// console.log(person["location"]);
+
+// //add object
+// person.middleName = "Banana";
+// console.log(person)
+// //delete from object
+// delete person.middleName
+// console.log(person)
+
+
+
+const car = {
+ type: "dodger",
+ model: "itsa",
+ color:"green",
+}
+
+console.log(typeof car);
+car.type ='Toyota';
+console.log(car);
+car.wheels = "hot Wheels"
+console.log(car)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
