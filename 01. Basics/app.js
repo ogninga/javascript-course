@@ -105,12 +105,12 @@
 //     i++;
 // } while (i <= 5);
 
-let i = 20
+// let i = 20
 
-do {
-    console.log("hellllll", i);
-    i++
-} while ( i <= 400);
+// do {
+//     console.log("hellllll", i);
+//     i++
+// } while ( i <= 400);
 
 
 
