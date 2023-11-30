@@ -197,63 +197,90 @@
 
 
 
-function firstLevel(f1){
-    const value = 100;
-    f1(value);
-}
+// function firstLevel(f1){
+//     const value = 100;
+//     f1(value);
+// }
 
-firstLevel(function(value){
-    console.log(value);
-});
-
-
-// example 2
+// firstLevel(function(value){
+//     console.log(value);
+// });
 
 
-
-function doggy(name, retrieved){
-    console.log(`Woof doggy ${name}`);
-    retrieved();
-}
-
-function retrieved(){
-    console.log(' I fetched a bone')
-}
-
-doggy("Sparky", retrieved)
+// // example 2
 
 
 
+// function doggy(name, retrieved){
+//     console.log(`Woof doggy ${name}`);
+//     retrieved();
+// }
 
+// function retrieved(){
+//     console.log(' I fetched a bone')
+// }
 
-// method
-
-const person = { 
-    name:"HuXn",
-    age: 19,
-    greet: function (){
-        return `Hello, my name is ${person.name} & I am ${person.age} years old.`;
-    },
-};
+// doggy("Sparky", retrieved)
 
 
 
 
 
+// // method
+
+// const person = { 
+//     name:"HuXn",
+//     age: 19,
+//     greet: function (){
+//         return `Hello, my name is ${person.name} & I am ${person.age} years old.`;
+//     },
+// };
 
 
+// //JSON
+
+// const person2 = {
+//     "name": "john doe",
+//     "age": 20,
+//     "email": "john@mail.com",
+//     "isSubscribed": true,
+//     "hobbies": ["Reading", "Running", "Cooking"
+//     ],
+//     "address": {
+//         "city": "New York",
+//         "state": true
+//     }
+// }
+// console.log(JSON.stringify(person2))
+
+//Date and Time
 
 
+// const currentDate = new Date()
 
 
+// console.log(currentDate)
 
 
+// // set interval
+
+// setInterval()
 
 
+//arrow functions
+
+// function greet(username){
+//     return `Hello ${username}`;
+// }
+// console.log(greet("pooty"))
 
 
+// vs 
 
+// greet = (username)  => {
+//     return `Hello ${username}`;
 
+// }
 
 
 
