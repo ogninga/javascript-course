@@ -158,17 +158,83 @@
 
 
 
-const car = {
- type: "dodger",
- model: "itsa",
- color:"green",
+// const car = {
+//  type: "dodger",
+//  model: "itsa",
+//  color:"green",
+// }
+
+// console.log(typeof car);
+// car.type ='Toyota';
+// console.log(car);
+// car.wheels = "hot Wheels"
+// console.log(car)
+
+// function greet() {
+//     console.log('Hello from the inside');
+// }
+
+// greet();
+
+// // use ` for console log
+// function sayHello(name){
+// console.log(`Hello ${name}`);
+// }
+
+// sayHello("Baby boo");
+
+// function add(x ,y){
+//     return x + y;
+// }
+
+// const res = add(10,20);
+
+// console.log(res);
+
+
+function firstLevel(f1){
+    const value = 100;
+    f1(value);
 }
 
-console.log(typeof car);
-car.type ='Toyota';
-console.log(car);
-car.wheels = "hot Wheels"
-console.log(car)
+firstLevel(function(value){
+    console.log(value);
+});
+
+
+// example 2
+
+function doggy(name, retrieved){
+    console.log(`Woof doggy ${name}`);
+    retrieved();
+}
+
+function retrieved(){
+    console.log(' I fetched a bone')
+}
+
+doggy("Sparky", retrieved)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
