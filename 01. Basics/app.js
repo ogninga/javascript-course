@@ -191,6 +191,11 @@
 
 // console.log(res);
 
+// Call back function
+
+// example 1
+
+
 
 function firstLevel(f1){
     const value = 100;
@@ -203,6 +208,8 @@ firstLevel(function(value){
 
 
 // example 2
+
+
 
 function doggy(name, retrieved){
     console.log(`Woof doggy ${name}`);
@@ -219,7 +226,15 @@ doggy("Sparky", retrieved)
 
 
 
+// method
 
+const person = { 
+    name:"HuXn",
+    age: 19,
+    greet: function (){
+        return `Hello, my name is ${person.name} & I am ${person.age} years old.`;
+    },
+};
 
 
 
