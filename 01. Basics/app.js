@@ -280,7 +280,133 @@
 // greet = (username)  => {
 //     return `Hello ${username}`;
 
+
+// rewriting arrow functions
+
+// function greet(username) {
+//     return `Hello ${username}`;
 // }
+
+// ways to type arrow functions
+// greet0 = (username, username2) => {
+//     argument1
+//     argument2
+//     return argument complete
+
+// }
+// greet = username => `Hello ${username}`;
+// const greet2 = username => `Hello ${username};
+
+
+
+// console.log(greet("billy"));
+
+
+
+// another arrow function example if empty just put ()
+
+//const double = n => n * 2;
+
+
+// challenge arrow functions
+
+// setTimeout(() => {
+//     console.log("hello");
+//     setTimeout(() => {
+//         console.log("Hey");
+//         setTimeout(() => {
+//             console.log("Namaste");
+//             setTimeout(() => {
+//                 console.log("Hi");
+//                 setTimeout(() => {
+//                     console.log("bonjours");
+//                 }, 2000);
+//             }, 2000);
+//         },2000)
+//     }, 2000)
+// }, 2000);
+
+
+// enahnced object literals
+// const user = (name, age, work) => {
+//     return{
+//         name: name,
+//         age: age,
+//         work: work,
+//     };
+// }
+
+// const user = (name, age, work) => {
+//     return{
+//         name,
+//         age,
+//         work,
+//         intro() {
+//             console.log(`My name is ${name} & I am ${age}, & my profession is ${work}`)},
+//     };
+// }
+
+// can use shorthand function in method in enanched object literals with function call and () weird. ill try to remember.
+
+// const leslie = user("Leslie", 31, "Programmer")
+// console.log(leslie.intro())
+
+// const obj = (a, b, c) =>{
+//     return{
+//         a,
+//         b,
+//         c,
+//         numbers() {
+//             console.log(`a is ${a} b is ${b} c is ${c}`)
+//         }
+//     }
+// }
+
+// const a = 1;
+// const b = 2;
+// const c = 3;
+
+// const nums = obj(1 , 2 , 3)
+// console.log(nums.numbers());
+
+// const lib = {
+//     sum(a,b) { a + b},
+//     mult(a,b) { a * b},
+// };
+//  console.log(lib.sum(2,3));
+//  console.log(lib.mult)
+const getPersonES6 = (name, age, height) =>
+{
+    return{
+        name,
+        age,
+        height,
+    }
+}
+
+const user1 = getPersonES6("Leslie", 31, 411);
+console.log(user1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
