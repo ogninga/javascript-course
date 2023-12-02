@@ -375,22 +375,43 @@
 // };
 //  console.log(lib.sum(2,3));
 //  console.log(lib.mult)
-const getPersonES6 = (name, age, height) =>
-{
-    return{
-        name,
-        age,
-        height,
-    }
+// const getPersonES6 = (name, age, height) =>
+// {
+//     return{
+//         name,
+//         age,
+//         height,
+//     }
+// }
+
+// const user1 = getPersonES6("Leslie", 31, 411);
+// console.log(user1);
+
+// countTo5 = (count = true) =>{
+//     if (count === true){
+//         for(let i = 1; i <= 5; i++){
+//             console.log(`Count: ${i}`);
+//         }
+//     }
+// }
+// countTo5()
+
+// ratings = (rate) =>{
+//     if (rate === 5) {
+//         console.log(`High Rating`)
+//     } else if (rate ===0){
+//         console.log(`Low Ratings :(`)
+//     }
+// }
+
+// ratings(5)
+
+multiply = (a,b = 1) =>  {
+    return a * b;
+        
 }
 
-const user1 = getPersonES6("Leslie", 31, 411);
-console.log(user1);
-
-
-
-
-
+console.log(multiply(3))
 
 
 
