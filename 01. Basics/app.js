@@ -443,11 +443,70 @@
 
 
 // without ... the items are nested in the index they are mentioned in
-const obj1 = {x:1, y:2}
-const obj2 = {z:3}
-const obj3 = {...obj1, ...obj2}
+// const obj1 = {x:1, y:2}
+// const obj2 = {z:3}
+// const obj3 = {...obj1, ...obj2}
 
-console.log(obj3)
+// console.log(obj3)
+// can be used to copy a property
+
+
+// let person = {
+//     name: 'emmanuel',
+//     age: 36,
+//     gender: 'male',
+// }
+// const clone = {...person, work: 'Programmer', location: 'Earth'};
+// console.log(clone)
+
+// Challenge
+
+// let arr = [1,2,3];
+// let arr2 = [4,5];
+
+// const arrclone = [...arr, ...arr2,]
+//  console.log(arrclone)
+
+
+// const user = {
+//     name: 'Jen',
+//     age: 22,
+// }
+
+// const jensClone = {...user}
+// console.log(jensClone)
+
+// rest operators
+
+user = (x,...userData) => {
+    console.log(x)
+    console.log(userData);
+}
+
+
+user("wow", 'Powe', 19)
+
+
+person = (firstName, lastName, ...Hobbies) => {
+console.log("First Name: ",firstName)
+console.log("Last Name: ",lastName)
+console.log("Hobbies: ",Hobbies)
+}
+
+
+person("HuXn", "WebDev", 'food', 'chicken', 'huuu')
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
