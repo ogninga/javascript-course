@@ -406,12 +406,54 @@
 
 // ratings(5)
 
-multiply = (a,b = 1) =>  {
-    return a * b;
+// multiply = (a,b = 1) =>  {
+//     return a * b;
         
-}
+// }
 
-console.log(multiply(3))
+// console.log(multiply(3))
+
+//spread operator 
+
+// giveMe4 = (a,b,c,d) =>{
+//     console.log("a", a);
+//     console.log("b", b);
+//     console.log("c", c);
+//     console.log("d", d);
+
+
+
+
+// }
+// const colors = [ 'red', 'green', 'blue', 'teal']
+// // spreads array into individual elements
+
+// giveMe4(...colors);
+
+
+// const strNums = ['one', 'two', 'three']
+// const moreStrNums = ['four', 'five', 'six']
+// const concats = [...strNums, ...moreStrNums]
+// console.log(concats)
+
+// let peoples = ['huxn', 'alex', 'jordan']
+
+// const allPeps = ['Timmy', ...peoples, "John"];
+// console.log(allPeps)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
