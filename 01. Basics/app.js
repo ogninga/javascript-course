@@ -478,64 +478,100 @@
 
 // rest operators
 
-user = (x,...userData) => {
-    console.log(x)
-    console.log(userData);
-}
+// user = (x,...userData) => {
+//     console.log(x)
+//     console.log(userData);
+// }
 
 
-user("wow", 'Powe', 19)
+// user("wow", 'Powe', 19)
 
 
-person = (firstName, lastName, ...Hobbies) => {
-console.log("First Name: ",firstName)
-console.log("Last Name: ",lastName)
-console.log("Hobbies: ",Hobbies)
-}
+// person = (firstName, lastName, ...Hobbies) => {
+// console.log("First Name: ",firstName)
+// console.log("Last Name: ",lastName)
+// console.log("Hobbies: ",Hobbies)
+// }
 
 
-person("HuXn", "WebDev", 'food', 'chicken', 'huuu', 11)
+// person("HuXn", "WebDev", 'food', 'chicken', 'huuu', 11)
 
 //good job emmanuel, keep working you will get there. think about the job and if it serves you.
 
+// movies = (...titles) => {
+//     console.log("Movie titles: ",titles);
+// }
+
+// movies("die hard", "Pokemon", "One Piece");
+
+
+// destructuring  
+
+
+// const foo = ['one', 'two', 'three', 'four', 'five', 'six']
+
+// const [one, two, three] = foo
+
+// console.log(one)
+// console.log(two)
+// console.log(three)
+
+//detructuring undefined variables with no value
+
+// const foo2 = ['one', 'two']
+
+// const [chicken, cat, dog] = foo2
+
+// console.log(chicken)
+// console.log(cat)
+// console.log(dog)
+
+//destructuring items, and giving them default values.
+// let a, b
+
+// [a = 5, b = 8] = ["one", "two"]
+// console.log(a)
+
+
+// pass array that gets returned as a function.
+
+
+// f = () =>{
+// return [1,2]
+// };
+
+// let c, d;
+// [c, d]=f()
+// console.log(c)
+// console.log(d)
+
+// how to ignore some return values
+
+// j = () =>{
+//     return[1,2,3,4]
+// }
+
+// const [f, , v, ] = j()
+
+// console.log(f)
+// console.log(v)
+// console.log(j())
+
+// const [a, ...b]=['one', 'two', 'three']
+
+// console.log(b)
 
 
 
+// const colors = ['red', 'green', 'blue', 'yellow', 'orange'];
+
+// const [color1, color2, color3, ...bleh] = colors
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(color1)
+// console.log(color2)
+// console.log(color3)
+// console.log(bleh)
 
 
 
