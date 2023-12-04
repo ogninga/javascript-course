@@ -494,7 +494,7 @@ console.log("Hobbies: ",Hobbies)
 }
 
 
-person("HuXn", "WebDev", 'food', 'chicken', 'huuu')
+person("HuXn", "WebDev", 'food', 'chicken', 'huuu', 11)
 
 //good job emmanuel, keep working you will get there. think about the job and if it serves you.
 
