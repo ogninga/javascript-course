@@ -820,31 +820,213 @@
 //     console.log(index, list[index])
 // }
 
-const object = {a: 1, b:2, c:3};
+// const object = {a: 1, b:2, c:3};
 
-for (let list in object){
-    console.log(list, object[list])
-}
+// for (let list in object){
+//     console.log(list, object[list])
+// }
 
+// for of loop
 
+// for (variable of iterable) {...}
 
+// let peoples = ['cherry', 'tote', 'john', 'billy']
 
-
-
-
-
-
-
-
-
+// for (let people of peoples){
+//     console.log(people)
+// }
 
 
+// difference between of loop and in loop
+// const text = "hello"
+// for (const letters of text) {
+//     console.log(letters)
+// }
+// for (let char in text){
+//     console.log(text[char])
+// }
+// end of difference between of loop and in loop
+
+// const array = ['a', 'b', 'c', 'd', 'e']
+
+
+// for (let alphabet of array) {
+//     console.log(alphabet)
+// }
+
+
+//   Array Helpers
+
+
+// const colors = ['teal', 'blue', 'red', 'green']
+
+// outdated ES5 way to iterate over array
+
+// for (var i = 0; i< colors.length; i++){
+//     console.log(colors[i])
+// }
+//ES6 way
+
+// colors.forEach(color => console.log(color))
+
+// const words = ["hello", 'bird', 'table', 'football', 'pipe', 'code'];
+
+// const capWords = words.forEach((word, index, arr) => {
+//     arr[index] = word[0].toUpperCase() + word.substring(1);
+// })
+// console.log(words)
+
+// const array1 = [1, 2, 3, 4, 5, 6, 7];
+
+// let sum = 0
+
+// function adder(number){
+
+//     sum += number
+// }
+
+// array1.forEach(adder)
+
+// console.log(sum)
+
+//array map helper********************************
+
+// let numbers = [1, 2, 3, 4, 5, 6]
+
+// let double = numbers.map(num => num *2)
+
+// console.log(double)
+
+// let people = [
+//     {firstName: 'Macom', lastName: 'Reynolds'},
+//     {firstName: 'Kaylee', lastName: 'Frye'},
+//     {firstName: 'Jayne', lastName: 'Cobb'},
+// ]
+
+// const results = people.map(person => {
+//     return[person.firstName, person.lastName]
+// })
+
+// console.log(results)
+
+// let randomNums = [1, 2, 3, 4, 5, 6]
+
+//can also store in seperate function then call it in the map method so that the array doesnt have to be duplicated if needed more than once.
+
+// let doubleNums = randomNums.map(double => double * 10);
+
+// console.log(doubleNums)
+
+// Filter array method ****************************************************************
+
+
+// const songs = [
+//         { name: "Lucky You", singer: "Joyner", duration: 4.34},
+//         { name: "Just Like You", singer: "NF", duration: 3.23},
+//         { name: "Humble Singer", singer: "Kendrick Lamar", duration: 2.33},
+//         { name: "Old Town Road", singer: "Lil Nas X", duration: 1.43},
+//         { name: "Cold Shoulder", singer: "Central Cee", duration: 5.23},
+//     ];
+
+// console.log(songs.filter((song => song.duration > 3)))
+
+// const computers = [
+//     {ram: 4, hdd: 100},
+//     {ram: 8, hdd: 200},
+//     {ram: 16, hdd: 300},
+//     {ram: 32, hdd: 400},
+// ];
+
+// console.log(computers.filter(speed => speed.ram > 16))
+
+
+// const ages = [32, 33, 16, 40]
+
+// console.log(ages.filter(age => age > 18))
+
+// const words = [
+//     'spray',
+//     'limit',
+//     'elite',
+//     'exuberant',
+//     'destruction',
+//     'present',
+// ]
+
+// wordLength = l => l.length >= 6
+
+// const wordList = words.filter(wordLength)
+
+// console.log(wordList)
+
+//reFactor every and some helpers
+
+// let products = [
+//     {name: 'Checkers', category: 'Toys'},
+//     {name: 'harry potter', category: 'books'},
+//     {name: 'iphone', category: 'electronics'},
+//     {name: 'learn php', category: 'books'},
+// ]
+
+// // do all products have a category of books? .every
+
+// let allProductsBooks = products.every(
+//     (product) => product.category === "books"
+// )
+
+// //do any products have a category of books?
+
+// let someProductsBooks = products.some(
+//     (product) => product.category === "books"
+// )
+
+// console.log(`does every category have books? : ${allProductsBooks}`)
+// console.log(`do any category have books? : ${someProductsBooks}`)
+
+// the find() method ********************************
+
+
+// const peoples = [
+//     {name: 'Howard', age : 100},
+//     {name: 'john', age: 20},
+//     {name: 'alex', age: 31},
+//     {name: 'jimbo', age: 22},
+//     {name: 'bob', age:33},
+// ]
+
+// const res = peoples.find(person => person.name === 'alex')
+// console.log(res)
+
+//find gives the first result, and filter returns all results
+// const posts = [
+//     {id: 1, content: 'Good post'},
+//     {id: 2, content: 'Funny Post'},
+//     {id: 3, content: 'Sad Post'},
+// ];
+
+// const postRes = posts.find((post) => post.content === 'Funny Post');
+// console.log(postRes);
+
+const ages = [3,10,18,20];
+
+const findAge = ages.find(age => age > 18)
+console.log(findAge);
+
+ 
+
+let products = [
+    {name: 'Checkers', category: 'Toys'},
+    {name: 'harry potter', category: 'books'},
+    {name: 'iphone', category: 'electronics'},
+    {name: 'learn php', category: 'books'},
+]
 
 
 
 
+const product = products.find(book => book.category === 'books')
 
-
+console.log(product);
 
 
 
