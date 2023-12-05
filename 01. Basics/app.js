@@ -1007,26 +1007,61 @@
 // const postRes = posts.find((post) => post.content === 'Funny Post');
 // console.log(postRes);
 
-const ages = [3,10,18,20];
+// const ages = [3,10,18,20];
 
-const findAge = ages.find(age => age > 18)
-console.log(findAge);
+// const findAge = ages.find(age => age > 18)
+// console.log(findAge);
 
- 
 
-let products = [
-    {name: 'Checkers', category: 'Toys'},
-    {name: 'harry potter', category: 'books'},
-    {name: 'iphone', category: 'electronics'},
-    {name: 'learn php', category: 'books'},
+
+
+// let products = [
+//     {name: 'Checkers', category: 'Toys'},
+//     {name: 'harry potter', category: 'books'},
+//     {name: 'iphone', category: 'electronics'},
+//     {name: 'learn php', category: 'books'},
+// ]
+
+
+
+
+// const product = products.find(book => book.category === 'books')
+
+// console.log(product);
+
+// the reduce method.
+
+// const numbers = [1,2,3,4,5,6,7,8,9]
+
+// const sum = numbers.reduce((p, c) => {
+//     console.log(`Previous: ${p}`)
+//     console.log(`Current: ${c}`)
+//     return p+c
+// }, 0)
+
+// console.log(sum);
+
+
+const peoples = [
+    {
+        name: 'Hu',
+        age: 2
+    },
+    {
+        name: 'Ha',
+        age: 22
+    },
+    {
+        name: 'Ho',
+        age: 33
+    },
 ]
 
 
 
 
-const product = products.find(book => book.category === 'books')
 
-console.log(product);
+
 
 
 
