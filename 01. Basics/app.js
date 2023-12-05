@@ -1042,34 +1042,49 @@
 // console.log(sum);
 
 
-const peoples = [
-    {
-        name: 'Hu',
-        age: 2
-    },
-    {
-        name: 'Ha',
-        age: 22
-    },
-    {
-        name: 'Ho',
-        age: 33
-    },
-]
+// const peoples = [
+//     {
+//         name: 'Hu',
+//         age: 2
+//     },
+//     {
+//         name: 'Ha',
+//         age: 22
+//     },
+//     {
+//         name: 'Ho',
+//         age: 33
+//     },
+// ]
 
+// const oldestAge = peoples.reduce((p,c)=> (c.age > p ? c.age : p), 0)
+// console.log(oldestAge)
 
+// const words =[
+//     'apple',
+//     'banana',
+//     'orange',
+//     'apple',
+//     'banana',
+//     'orange',
+//     'grape',
+// ]
 
+// const wordFrequency = words.reduce((frequencyMap, word) => {
+//     frequencyMap[word] = (frequencyMap[word] || 0 + 1)
+//     return frequencyMap;
+// }, {})
 
+// console.log(wordFrequency)
 
+calculateProduct = arr => {
+    return arr.reduce((accumulator, currentValue) => accumulator * currentValue)
+}
 
+const numbers = [1,2,3,40]
 
-
-
-
-
-
-
-
+const product = calculateProduct(numbers);
+console.log(product)
 
 
 
