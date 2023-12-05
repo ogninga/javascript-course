@@ -574,9 +574,185 @@
 // console.log(bleh)
 
 
+// in object destructuring order doesnt matter but the name does matter. in object destructuring 
+//the name is already determined by the order of the events, ex student already has a title 
+// so always when destructuring choose a name that makes sense when pulling it out.
+
+// const student = {name: 'Student', position: "first", rollNo:27}
+
+// const {rollNo} = student
+
+// console.log(rollNo);
+
+
+// no ... in object destructuring 
+// const person = {
+//     name: "John Doe",
+//     age: 30,
+//     gender: "male",
+//     country: "USA",
+// }
+
+// const {name, age, country} = person
+// console.log(name, age, country)
+
+// rename varibles (OBJECTS ONLY!!!) 
+
+// const num = {x:100, y:200}
+// const {x: newXname, y: newYname} = num
+
+// console.log(newXname)
+// console.log(newYname)
+
+
+//rest operator with object destructuring
+
+// let{a, b, ...rest} = {a: 100, b:200, c:300, d:400, e:500}
+// console.log(a, b, rest)  
+
+
+// const person = {
+//         name: "John Doe",
+//         age: 30,
+//         gender: "male",
+//         country: "USA",
+//     }
+
+// const {name: personName, age: personAge, country: personCountry} = person
+
+// console.log(personName)
+// console.log(personAge)
+// console.log(personCountry)
+
+// const person = {
+//     name: 'John Doe',
+//     age: 30,
+//     country: 'USA',
+// }
+// const person2 = {
+//     name: 'John Does',
+//     age: 31,
+//     country: 'toilet',
+// }
+
+//way number one with repeating person tag 
+// printPersonInfo = person =>{
+//     console.log(`Name: ${person.name}`)
+//     console.log(`Age: ${person.age}`)
+//     console.log(`Country: ${person.country}`)
+// }
+//way number two with less repeating
+
+
+// printPersonInfo = ({name, age, country}) =>{
+//     console.log(`Name: ${name}`)
+//     console.log(`Age: ${age}`)
+//     console.log(`Country: ${country}`)
+// }
+
+// printPersonInfo(person2)
+
+//object to function destructuring, the object is created, then the values that needs to be pulled are listed in the params of the function, the function takes the arguments, on calling the function the function can take the name of the object and then use its params to fill what the function takes as a argument.
+
+//sample 2
+// let options = {
+//     title: "my menu",
+//     items: ['item1', 'item2']
+// }
+
+// showMenu = ({title:  Untitled, width: w = 100, height: h = 200, items: [item1, item2] }) => {
+//     console.log(`${Untitled} ${w} ${h}`)
+//     console.log(item1)
+//     console.log(item2)
+// }
 
 
 
+// showMenu(options)
+
+//nested destructuring array and objects together
+
+// const songs = [
+//     { name: "Lucky You", singer: "Joyner", duration: 4.34},
+//     { name: "Just Like You", singer: "NF", duration: 3.23},
+//     { name: "Humble Singer", singer: "Kendrick Lamar", duration: 2.33},
+//     { name: "Old Town Road", singer: "Lil Nas X", duration: 1.43},
+//     { name: "Cold Shoulder", singer: "Central Cee", duration: 5.23},
+// ];
+
+// const [, , , {singer: artist}] = songs
+
+// console.log(artist)
+
+
+//destructuring mixer Read over this to see the limits of dustructuring and refer back to this in the future.
+
+const data = {
+    user:{
+        id:123,
+        name: "John Doe",
+        age: 30,
+        email: "john.doe@example.com",
+        address: {
+            city:"New York",
+            country: 'USA',
+        },
+        hobbies: ["Reading", "Painting", "Cooking"],
+        scores: {
+            math:95,
+            science: 88,
+            history: 75,
+        },
+    },
+    products: [
+        {id: 1, name: "Laptop", price: 1000},
+        {id: 2, name: "Phone", price: 800},
+        {id: 3, name: "Tablet", price: 500},
+    ],
+    settings: {
+        darkMode: true,
+        notifications: {
+            email: true,
+            sms: false,
+            push: true,
+        },
+        language: "English",
+    },
+};
+
+const {
+    user: {
+        name, age, address: {city, country},hobbies,scores: {math, science, history},
+        email,
+
+    },
+    products: [product1, product2, product3],
+    settings:{
+        darkMode,
+        notifications:{
+            email: emailNotification,
+            sms: smsNotification,
+            push: PushNotification,
+        },
+        language,
+    },
+} = data;
+
+console.log(`Name: ${name}`);
+console.log(`Age: ${age}`);
+console.log(`Address: ${city}, ${country}`);
+console.log(`Hobbies: ${hobbies.join(", ")}`);
+console.log(`Math Score: ${math}`);
+console.log(`Science Score: ${science}`);
+console.log(`History Score: ${history}`);
+console.log(`Product1: ${product1.name} - $${product1.price}`);
+console.log(`Product2: ${product2.name} - $${product2.price}`);
+console.log(`Product3: ${product3.name} - $${product3.price}`);
+console.log(`Dark Mode: ${darkMode}`);
+console.log(`Email Notification: ${emailNotification}`);
+console.log(`SMS Notification: ${smsNotification}`);
+console.log(`Push Notification: ${PushNotification}`);
+console.log(`language: ${language}`);
 
 
 
