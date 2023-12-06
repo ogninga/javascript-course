@@ -1088,38 +1088,54 @@
 
 //  maps
 
-const map = new Map()
-console.log(map);
+// const map = new Map()
+// console.log(map);
 
-const keyOne = "string"
-const keyTwo ={}
-const keyThree = function () {}
-const keyFour = []
+// const keyOne = "string"
+// const keyTwo ={}
+// const keyThree = function () {}
+// const keyFour = []
 
-map.set(keyOne, "Value of key One")
-map.set(keyTwo, "Value of key Two")
-map.set(keyThree, "Value of key Three");
+// map.set(keyOne, "Value of key One")
+// map.set(keyTwo, "Value of key Two")
+// map.set(keyThree, "Value of key Three");
 
-console.log(map.keys())
-console.log(map.values())
-console.log(map.delete(keyTwo))
-console.log(map.size)
+// console.log(map.keys())
+// console.log(map.values())
+// console.log(map.delete(keyTwo))
+// console.log(map.size)
 
+// for (let [key, value] of map ){
+// console.log(`${key} -- ${value}`)
+// }
 
+// for (let key of map.keys()){
+//     console.log(key)
+// }
 
-
-
-
-
-
-
-
-
-
-
-
+// for (let value of map.values()) {
+//     console.log(value)
+// }
 
 
+// const map = new Map();
+
+// const keyOne = "a";
+// const keyTwo = "b";
+// const keyThree = "c";
+
+// map.set(keyOne, 1)
+// map.set(keyTwo, 2)
+// map.set(keyThree, 3)
+
+// console.log(map.get(keyOne))
+
+// for (let key of map.keys(keyOne)) {
+//     console.log(key)
+// }
+// for (let value of map.values(keyOne)) {
+//     console.log(value)
+// }
 
 
 
