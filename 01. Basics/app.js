@@ -1086,6 +1086,19 @@
 // const product = calculateProduct(numbers);
 // console.log(product)
 
+//  maps
+
+const map = new Map()
+console.log(map);
+
+const keyOne = "string"
+const keyTwo ={}
+const keyThree = function () {}
+
+map.set(keyOne, "Value of key One")
+map.set(keyTwo, "Value of key Two")
+map.set(keyThree, "Value of key Three")
+
 
 
 
