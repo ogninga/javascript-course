@@ -1094,13 +1094,16 @@ console.log(map);
 const keyOne = "string"
 const keyTwo ={}
 const keyThree = function () {}
+const keyFour = []
 
 map.set(keyOne, "Value of key One")
 map.set(keyTwo, "Value of key Two")
-map.set(keyThree, "Value of key Three")
+map.set(keyThree, "Value of key Three");
 
-
-
+console.log(map.keys())
+console.log(map.values())
+console.log(map.delete(keyTwo))
+console.log(map.size)
 
 
 
