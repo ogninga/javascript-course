@@ -1177,38 +1177,52 @@
 
 //symbols
 
-const mySymbol = Symbol("My my my")
+// const mySymbol = Symbol("My my my")
 
-console.log(mySymbol)
+// console.log(mySymbol)
 
 //comparing symbols
 
-const mySymbol1 = Symbol("name")
-const mySymbol2 = Symbol("name")
+// const mySymbol1 = Symbol("name")
+// const mySymbol2 = Symbol("name")
 
-console.log(mySymbol1 === mySymbol2)
+// console.log(mySymbol1 === mySymbol2)
 
+// const newObject = {};
 
-
-
-
-
-
+// newObject[mySymbol1] = "value 1"
+// newObject[mySymbol2] = "value 2"
 
 
+// console.log(newObject)
+
+// const symbol1 = Symbol("name");
+// const symbol2 = Symbol("name")
 
 
+// const itemsObject = {}
+// itemsObject.age = 36
+// itemsObject["gender"] = 'male'
+// itemsObject[symbol1] = "alex"
+// itemsObject[symbol2] = "billy"
 
+// console.log(itemsObject)
 
+// const symbolT = Symbol("foo")
 
+// console.log(typeof symbolT)
 
+// const emptyObject = {}
 
+// emptyObject[symbolT] = 'value'
 
+// console.log(emptyObject)
 
+// for (let i in emptyObject){
+//     console.log(i)
+// }
 
-
-
-
+// dom (document object model)
 
 
 
