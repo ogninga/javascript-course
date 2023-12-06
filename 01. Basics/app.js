@@ -1138,6 +1138,44 @@
 // }
 
 
+//sets
+
+// const initialValues = [1,2,2,2,3,4,3]
+// const mySet = new Set(initialValues)
+// const mySet2 = new Set()
+
+//caps is a unique value
+// mySet2.add("apple")
+// mySet2.add("Banana")
+// mySet2.add("Orange")
+// mySet2.add("apple")
+
+// for (let item of mySet2){
+//     console.log(item)
+// }
+
+
+
+// console.log(mySet2.has("banana"))
+// mySet2.delete('Banana')
+// mySet2.clear()
+// console.log(mySet2)
+
+// console.log(mySet2)
+
+
+
+// const letters = new Set()
+
+// letters.add("a")
+// letters.add("b")
+// letters.add("c")
+
+// for (let alpha of letters){
+//     console.log(alpha)
+// }
+
+
 
 
 
