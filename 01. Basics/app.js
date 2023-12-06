@@ -1175,13 +1175,18 @@
 //     console.log(alpha)
 // }
 
+//symbols
 
+const mySymbol = Symbol("My my my")
 
+console.log(mySymbol)
 
+//comparing symbols
 
+const mySymbol1 = Symbol("name")
+const mySymbol2 = Symbol("name")
 
-
-
+console.log(mySymbol1 === mySymbol2)
 
 
 
