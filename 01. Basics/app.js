@@ -1077,14 +1077,25 @@
 
 // console.log(wordFrequency)
 
-calculateProduct = arr => {
-    return arr.reduce((accumulator, currentValue) => accumulator * currentValue)
-}
+// calculateProduct = arr => {
+//     return arr.reduce((accumulator, currentValue) => accumulator * currentValue)
+// }
 
-const numbers = [1,2,3,40]
+// const numbers = [1,2,3,40]
 
-const product = calculateProduct(numbers);
-console.log(product)
+// const product = calculateProduct(numbers);
+// console.log(product)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
