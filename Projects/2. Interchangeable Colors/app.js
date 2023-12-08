@@ -1,7 +1,7 @@
 // Getting Elements From The DOM
 const btns = document.querySelectorAll(".btn");
 const body = document.body;
-// console.log(btns);
+// console.log(btns); 
 
 // Iterating over all buttons
 btns.forEach((btn) => {
