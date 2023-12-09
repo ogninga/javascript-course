@@ -233,12 +233,38 @@
 // console.log(john)
 // john.greet()
 
+// protype inheritance
+
+// function Animale(name){
+//     this.name = name;
+
+// }
+
+
+// Animale.prototype.sound = function(){
+//     return "Animal Sound"
+// }
+// useful for attaching methods to different functions
+// const ani1 = new Animale("Frog");
+// console.log(ani1.sound());
 
 
 
+// function Dog(name, breed){
+//     Animale.call(this, name);
+//     this.breed = breed;
+
+// }
+
+//the object.create creates a new object, out of an existing object that functions as the prototype of a new object copy and past litterally
+// Dog.prototype = Object.create(Animale.prototype)
 
 
 
+//cant access a function from a function thats declared differently, I mean a method? look above for example
+
+// const dog1 = new Dog("Buddy", "Genius")
+// console.log(dog1.sound())
 
 
 
