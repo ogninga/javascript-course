@@ -107,44 +107,102 @@
 
 
 
-function createCar(type, brand, model, year){
-    return{
-        type,
-        brand,
-        model,
-        year,
-        specs : function () {
-            return console.log(`My car is a ${this.type}, made by ${this.brand}. It is a ${this.year} ${this.model} `)
-        }
+// function createCar(type, brand, model, year){
+//     return{
+//         type,
+//         brand,
+//         model,
+//         year,
+//         specs : function () {
+//             return console.log(`My car is a ${this.type}, made by ${this.brand}. It is a ${this.year} ${this.model} `)
+//         }
 
-    }
-}
+//     }
+// }
 
-const driverBob = createCar("sedan", "dodge", "avenger", "2003");
+// const driverBob = createCar("sedan", "dodge", "avenger", 2003);
 
-driverBob.specs()
-
-
+// driverBob.specs()
 
 
+//constructor function 
+
+// function CreatePeople(firstName, lastName, pl){
+//     this.firstName = firstName // gives window
+//     this.lastName = lastName
+//     this.pl =pl
+
+//     this.info = function () {
+//         console.log(`Hello my name is ${this.firstName} ${this.lastName} & I love ${this.pl}`)
+//     }
+// }
+
+//the new keyword:
+//1. first create empty object {}
+//2. sets "this" to point to that object
+//3. we can omit the return keyword statement due to the new keyword.
+
+// const john = new CreatePeople("john", "doe", "python")
+// console.log(john)
+
+// john.info()
 
 
+// function Book(title, author, year) {
+//     this.title = title
+//     this.author = author
+//     this.year = year
+
+//     this.getInfo = function(){
+//         return `${this.title} by ${this.author} (${this.year})`
+//     }
+// }
+
+// const book1 = new Book("the subtile art of not giving a f*ck", "mark", 2020)
+// const book2 = new Book("atomic habits", "james", 2022)
+
+// console.log(book1)
+
+// console.log(book1.getInfo())
+
+// function Person(name, age, gender) {
+//     this.name = name
+//     this.age = age
+//     this.gender = gender
+//     this.info = function () {
+//         return ` my name is ${name} and I am ${age} years old. I am a ${gender}`
+//     }
+// };
+
+// const newUser = new Person("timmy", 23, "Male")
+// const userDetails = newUser.info()
+// console.log(userDetails)
+
+// function Car(make, model, year, color){
+//     this.make = make;
+//     this.model = model;
+//     this.year = year;
+//     this.color = color;
+//     this.start = function () {
+//        return `Starting the ${this.make} ${this.model}`
+//     };
+//     this.stop = function () {
+//        return `Stopping the ${this.make} ${this.model}`
+//     }
 
 
+// }
+// const car1 = new Car("Dodge", "Ram", 2024, "Red")
+// const car2 = new Car("Jeep", "Cheap", 2021, "blue")
+
+// const c1 = car1.start()
+// const c2 = car2.stop()
 
 
+// console.log(c1)
+// console.log(c2)
 
-
-
-
-
-
-
-
-
-
-
-
+// built in constructor
 
 
 
