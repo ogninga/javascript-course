@@ -205,8 +205,33 @@
 // built in constructor
 
 
+// const num1 = new Number(10)
+// const st1 = new String("emman") //string must be typed in upper case first letter
+// const bool1 = new Boolean(true)
+// const arr1 = new Array(1,2,3,4,5)
+// console.log(arr1)
+
+//object.create()
 
 
+// let person = {
+//     greet: function () {
+//         console.log(`hello my name is ${this.firstName} ${this.lastName}`)
+//     }
+// }
+
+// const eman = Object.create(person)
+// eman.firstName = "huse"
+// eman.lastName ="poo"
+
+// eman.greet()
+
+// let john = Object.create(person, {
+//     firstName: {value: "John"},
+//     lastName: {value: "Doe"}
+// })
+// console.log(john)
+// john.greet()
 
 
 
