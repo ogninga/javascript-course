@@ -266,5 +266,90 @@
 // const dog1 = new Dog("Buddy", "Genius")
 // console.log(dog1.sound())
 
+//classes 
+
+//class declarations
+// class Person {
+//     constructor(firstName, lastName, age) {
+//         //Instance Members
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//         this.printUserInfo = function (){
+//             return `Name: ${this.firstName} ${this.lastName}, Age: ${this.age}`
+//         }
+
+
+
+//     }
+//     // protype members
+//     greet(){
+//        return `hello from ${this.firstName} ${this.lastName}`
+//     }
+
+
+// }
+
+
+// inheritance from classes
+
+// class Programmer extends Person {
+//     constructor(firstName, lastName, age, pl, experience) {
+//         super(firstName, lastName, age) // <this calls the parent constructor
+//         this.pl = pl;
+//         this.experience = experience
+
+
+// }
+// }
+
+
+
+//creating instance of classes
+
+// const john = new Person("eman", "john", 192)
+
+// console.log(john.greet())
+
+
+// const bob = new Programmer("HuXn", "WebDev", 19, "Golang", 12);
+// console.log(bob.greet())
+
+// class Hero {
+//     constructor(name, level){
+//         this.name = name;
+//         this.level = level;
+//     }
+//     greet() {
+//         return `Hello, ${this.name}, you are level ${this.level}`
+//     }
+// }
+
+// const newHero = new Hero("wizzy", 29)
+// console.log(newHero.greet())
+// console.log(newHero)
+
+// class Mega extends Hero {
+//     constructor(name, level, spell){
+//         super(name, level)
+//         this.spell = spell;
+//     }
+// }
+
+// const newMega = new Mega("Wiz", "99", "Explosion")
+// console.log(newMega)
+// console.log(newMega.greet())
+
+
+
+
+
+
+
+
+
+
+
+
 
 
