@@ -341,6 +341,30 @@
 // console.log(newMega.greet())
 
 
+// next section modifiers of javascript.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
