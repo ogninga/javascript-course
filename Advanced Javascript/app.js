@@ -403,6 +403,51 @@
 // console.log(myObject.accessProtectedMethod())
 
 
+// encapsulation 
+
+function Counter() {
+    let _count = 0 //private variable
+    
+    //public method that can access and modify the private variable
+
+    this.increment = function () {
+        _count ++
+    }
+
+    this.decrement = function (){
+        _count --
+    }
+
+    this.getCount = function () {
+        return _count
+    }
+}
+
+
+const counter = new Counter()
+console.log(counter._count)
+console.log(counter.getCount()) // 0
+counter.increment()
+counter.increment()
+counter.increment()
+console.log(counter.getCount()) // 3
+counter.decrement()
+console.log(counter.getCount()) // 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
