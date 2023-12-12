@@ -647,13 +647,47 @@
 
 // console.log('end')
 
+//callback hell
 
+// function callBackHell(callback){
+//     setTimeout(()=>{
+//         const data = "inside (callbackHEll) function"
+//         console.log(data)
+//         callback(data)
+//     }, 2000)
+// }
 
+// function firstFunc( data, callback){
+//     setTimeout(() => {
+//         const processedData = `${data} - Processed first`
+//         console.log(`Inside(firstFunc) function`)
+//         callback(processedData)
+//     }, 1000);
+// }
 
+// function secondFunc(data, callback) {
+//     setTimeout(() => {
+//         const processedData = `${data} - Processed Second`
+//         console.log('Inside (secondFunc) Function')
+//         callback(processedData)
+//     },1500 );
+// }
 
+//CallbackHEll start
+// callBackHell((data) => {
+//     firstFunc(data, (processedData1) =>{
+//         secondFunc(processedData1,(processedData2)=>{
+//             console.log(`Final result of all functions: ${processedData2}`)
+//         })
+//     })
+// })
 
+// callback is not always asynchornous
+// console.log("start")
 
-
+// const numbers = [1,2,3,4,5,6,7,8,9,10]
+// numbers.forEach((n) => console.log(n))
+// console.log("End")
 
 
 
