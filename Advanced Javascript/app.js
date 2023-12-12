@@ -574,17 +574,57 @@
 // console.log(dog.makeSound())
 // console.log(dog);
 
+//Polymorphism 
+
+//typically achieved thought method overriding, where a subclass provides its own implementation of a method that is already defined in the parent class.
+
+//superclass or parent class
+// class Animal{
+//     constructor(name){
+//         this.name = name
+//     }
+//     makeSound(){
+//         return "unkown sound"
+//     }
+// }
+
+
+// class Dog extends Animal{
+//     constructor(name) {
+//         super(name)
+//     }
+    //overriding method
+//     makeSound(){
+//         return "Woof!"
+//     }
+// }
+
+// class Cat extends Animal {
+//     constructor(name){
+//         super(name)
+//     }
+    //overriding method
+  
+//     makeSound(){
+//         return 'Meow!'
+//     }
+// }
 
 
 
+// function animalInfo(animal){
+//     console.log(`Name: ${animal.name}`)
+//     console.log(`Sound: ${animal.makeSound()}`)
+// }
 
+// const genericAnimal = new Animal("Generic Animal")
+// animalInfo(genericAnimal)
 
+// const dog = new Dog("buddy");
+// animalInfo(dog);
 
-
-
-
-
-
+// const cat = new Cat("winny")
+// animalInfo(cat)
 
 
 
