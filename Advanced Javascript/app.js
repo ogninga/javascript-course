@@ -627,6 +627,59 @@
 // animalInfo(cat)
 
 
+//Synchronous Code
+// function myFunc(){
+//     console.log('inside function')
+// }
+
+
+// console.log('start')
+// myFunc()
+// console.log('end')
+
+//asynchronous code
+
+// console.log('start')
+
+// setTimeout(() => {
+//     console.log('Inside SetTimeOut');
+// }, 2000)
+
+// console.log('end')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
