@@ -405,93 +405,93 @@
 
 // encapsulation 
 
-function Counter() {
-    let _count = 0 //private variable
+// function Counter() {
+//     let _count = 0 //private variable
     
-    //public method that can access and modify the private variable
+//     //public method that can access and modify the private variable
 
-    this.increment = function () {
-        _count ++
-    }
+//     this.increment = function () {
+//         _count ++
+//     }
 
-    this.decrement = function (){
-        _count --
-    }
+//     this.decrement = function (){
+//         _count --
+//     }
 
-    this.getCount = function () {
-        return _count
-    }
-}
-
-
-const counter = new Counter()
-console.log(counter._count)
-console.log(counter.getCount()) // 0
-counter.increment()
-counter.increment()
-counter.increment()
-console.log(counter.getCount()) // 3
-counter.decrement()
-console.log(counter.getCount()) // 2
+//     this.getCount = function () {
+//         return _count
+//     }
+// }
 
 
-//abstraction 
+// const counter = new Counter()
+// console.log(counter._count)
+// console.log(counter.getCount()) // 0
+// counter.increment()
+// counter.increment()
+// counter.increment()
+// console.log(counter.getCount()) // 3
+// counter.decrement()
+// console.log(counter.getCount()) // 2
 
 
-// Abstract classs (providing a blueprint for subclasses)
-
-//parent class
-class Animal {
-    constructor(name){
-        this.name = name;
-    }
-
-    // Abstract method ( to be implemented by subclasses)
-
-    makeSound() {
-        throw new Error("Method makeSound() must be implemented in order to use, DO better!")
-    }
+// //abstraction 
 
 
+// // Abstract classs (providing a blueprint for subclasses)
+
+// //parent class
+// class Animal {
+//     constructor(name){
+//         this.name = name;
+//     }
+
+//     // Abstract method ( to be implemented by subclasses)
+
+//     makeSound() {
+//         throw new Error("Method makeSound() must be implemented in order to use, DO better!")
+//     }
 
 
 
 
 
-}
 
 
-class Dog extends Animal {
-    constructor(name){
-        super(name)
-    }
-    //implementing the abstract method
-    makeSound(){
-        return "Woof!"
-    }
-}
-
-//concrete subclass
-class Cat extends Animal {
-    constructor(name){
-        super(name)
-    }
-
-    makeSound(){
-        return "meow!"
-    }
-}
-
-const dog = new Dog ("Buddy")
-
-console.log(dog.name)
-console.log(dog.makeSound())
-
-const cat = new Cat("whiskey")
+// }
 
 
-console.log(cat.name)
-console.log(cat.makeSound())
+// class Dog extends Animal {
+//     constructor(name){
+//         super(name)
+//     }
+//     //implementing the abstract method
+//     makeSound(){
+//         return "Woof!"
+//     }
+// }
+
+// //concrete subclass
+// class Cat extends Animal {
+//     constructor(name){
+//         super(name)
+//     }
+
+//     makeSound(){
+//         return "meow!"
+//     }
+// }
+
+// const dog = new Dog ("Buddy")
+
+// console.log(dog.name)
+// console.log(dog.makeSound())
+
+// const cat = new Cat("whiskey")
+
+
+// console.log(cat.name)
+// console.log(cat.makeSound())
 
 
 //-- explanation of whats going on. above
@@ -505,13 +505,74 @@ console.log(cat.makeSound())
 //inheritance
 
 
+//ES5 code
+
+// function Animal(name){
+//     this.name = name;
+// }
 
 
+//method shared among all Animal instances
 
+// Animal.prototype.makeSound = function (){
+//     return "Unknown sound"
+// }
 
+//Subclass constructor inheriting from animal
 
+// function Dog(name){
+// Animal.call(this, name) // call the super class constructor
+// }
 
+//setup prototype chain for Dog to inherit form Animal
 
+// Dog.prototype = Object.create(Animal.prototype)
+
+//Method specific to Dog
+
+// Dog.prototype.makeSound = function () {
+//     return `WOOF!`
+// }
+
+//creating instances of the classes
+
+// const genericAnimal = new Animal("Generic animal name")
+// console.log(genericAnimal.name)
+// console.log(genericAnimal.makeSound())
+// const dog = new Dog("Buddy")
+
+// console.log(dog.makeSound())
+
+//ES6
+
+//define superclass
+
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     makeSound() {
+//         return 'Unknown Sound'
+//     }
+// }
+
+//subclass inheriting from animal
+
+// class Dog extends Animal{
+//     constructor(name) {
+//         super(name)
+// }
+// makeSound(){
+//     return"Woof!"
+// }
+// }
+
+// const genericAnimal = new Animal("Generic animal name")
+// console.log(genericAnimal.makeSound())
+
+// const dog = new Dog("buudt")
+// console.log(dog.makeSound())
+// console.log(dog);
 
 
 
