@@ -344,17 +344,63 @@
 // next section modifiers of javascript.
 
 
+// full oop effects, encapsulation abstraction inheritance and polymorphism
+
+//private makes property private
+
+//public make it public avalible, makes it accessible
+
+//protected, only accessible inside class.
+
+// function MyClass(publicField, privateField, protectedField){
+//     //public field
+//     this.publicField = publicField
+
+//     //private field (closure) wont make it really private, but it is understood that it isnt to be used outside.
+//     //const keeps it private in the class
+//     const _privateField = privateField
+
+//     //protected Field 
+//     const _protectedField = protectedField
 
 
 
+//     // public method
+//     this.publicMethod = function (){
+//         return `Public Field: ${this.publicField}`
+//     }
 
+//     //private method (closure)
+//     function _privateMethod(){
+//         return `Private Method: ${_privateField}`
+//     }
 
+//     //Protected MEthod (closure)
 
+//     function _protectedMethod(){
+//         return `Protected MEthod: ${_protectedField}`
+//     }
 
+//     // Method to access protected method
+//     this.accessProtectedMethod = function (){
+//         return _protectedMethod()
+//     }
 
+// }
 
+// const myObject = new MyClass("Public data", "Private Data", "Protected Data")
 
+// // console.log(myObject.publicField)
+// // console.log(myObject.privateField)
+// // console.log(myObject.protectedFieldField)
+// console.log(myObject.publicMethod())
 
+// // does not work due to protected or private
+// // console.log(myObject._privateMethod())
+// // console.log(myObject._protectedMethod())
+
+// //still works cause java has no real way to stop it.
+// console.log(myObject.accessProtectedMethod())
 
 
 
