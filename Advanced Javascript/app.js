@@ -435,7 +435,74 @@ counter.decrement()
 console.log(counter.getCount()) // 2
 
 
+//abstraction 
 
+
+// Abstract classs (providing a blueprint for subclasses)
+
+//parent class
+class Animal {
+    constructor(name){
+        this.name = name;
+    }
+
+    // Abstract method ( to be implemented by subclasses)
+
+    makeSound() {
+        throw new Error("Method makeSound() must be implemented in order to use, DO better!")
+    }
+
+
+
+
+
+
+
+}
+
+
+class Dog extends Animal {
+    constructor(name){
+        super(name)
+    }
+    //implementing the abstract method
+    makeSound(){
+        return "Woof!"
+    }
+}
+
+//concrete subclass
+class Cat extends Animal {
+    constructor(name){
+        super(name)
+    }
+
+    makeSound(){
+        return "meow!"
+    }
+}
+
+const dog = new Dog ("Buddy")
+
+console.log(dog.name)
+console.log(dog.makeSound())
+
+const cat = new Cat("whiskey")
+
+
+console.log(cat.name)
+console.log(cat.makeSound())
+
+
+//-- explanation of whats going on. above
+
+// there is an abstract class on Animale, that has an abstract method makeSound() the makeSound() method is declared in the Animal Class, but isnt provided an inherited implementation. it is meant to be implemented in subclasses like the dog and cat subclasses
+
+//the Dog and Cat classes are called concrete subclasses that inherit from the animal class with the help of the super keyword. They make use and implement the abstract method makeSound() with their own customizations as to what sound to make on call.
+
+//by using abstraction, a common interface makeSound() that each subclass must implement, while the internal details of how each animale makes its sound. this makes the code simplified, and allows work with different animals at a higher level of abstraction. this allows the specifics of each animal sound implementation to work without to much worry.
+
+//inheritance
 
 
 
