@@ -1053,11 +1053,23 @@
 //     }).catch((error) => console.log(error))
 // }
 
+//error handling
 
+// function parseJSON(jsonString){
+//     try{
+//         return JSON.parse(jsonString)
+//     } catch (error){
+//         console.error(`An error occurred while parsing JSON: ${error.message}`)
+//         return null;
+//     }
+// }
 
+// const validJSON = '{"name": "pooty", "age": 33}'
+// const invalidJSON = '{"name": "pooty", "age": 33,}'
 
-
-
+// const result1 = parseJSON(validJSON)
+// const result2 = parseJSON(invalidJSON)
+// console.log(result2)
 
 
 
