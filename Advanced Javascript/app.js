@@ -979,7 +979,7 @@
 
 // fetch("text.txt").then(res => res.text()).then(data => console.log(data)).catch(error => console.log(error))
 
-const result = document.querySelector('.results')
+// const result = document.querySelector('.results')
 
 // fetch("text.txt").then((res) => {
 //     if (!res.ok) throw Error(res.statusText)
