@@ -689,25 +689,127 @@
 // numbers.forEach((n) => console.log(n))
 // console.log("End")
 
+//promises
+
+// function checkNumber(number){
+//     return new Promise((resolve, reject) => {
+//         if (number % 2 === 0){
+//             resolve(`${number} is an even number`)
+//         } else {
+//             reject(`${number} is an odd number`)
+//         }
+//     });
+// };
+
+// or 
+
+// const checkNumber = (number) => new Promise((resolve, reject) => number % 2 === 0 ? resolve(`${number} is an even number`) : reject(`${number} is an odd number`))
+
+
+
+// const numberToCheck = 7
+// //then and catch, then excudes on true, catch executes on false
+// checkNumber(numberToCheck).then((message) => {
+//     console.log(`Success: ${message}`)
+// }).catch(error => console.log(`Error: ${error}`))
 
 
 
 
 
+// refactored
 
 
+// function callBackHell(callback){
+//     setTimeout(()=>{
+//         const data = "inside (callbackHEll) function"
+//         console.log(data)
+//         callback(data)
+//     }, 2000)
+// }
+
+// function firstFunc( data, callback){
+//     setTimeout(() => {
+//         const processedData = `${data} - Processed first`
+//         console.log(`Inside(firstFunc) function`)
+//         callback(processedData)
+//     }, 1000);
+// }
+
+// function secondFunc(data, callback) {
+//     setTimeout(() => {
+//         const processedData = `${data} - Processed Second`
+//         console.log('Inside (secondFunc) Function')
+//         callback(processedData)
+//     },1500 );
+// }
 
 
+// function callBackHell() {
+//     return new Promise((resolve) =>{
+//         setTimeout(() => {
+//             const data = "Inside(callbackhell) function"
+//             console.log(data)
+//             resolve(data)
+//         }, 2000);
+//     })
+// }
+
+// function firstFunc(data) {
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const processedData = `${data} - Processed data`
+//             console.log("Inside (firstFunc) function")
+//             resolve(processedData)
+//         }, 2000);
+//     })
+// }
+
+// function secondFunc(data){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const processedData = `${data} - Processed data`
+//             console.log("Inside (second func) function")
+//             resolve(processedData)
+//         }, 1500);
+//     })
+// }
+
+// callBackHell()
+// .then((data) => firstFunc(data))
+// .then((processedData1) => secondFunc(processedData1))
+// .then((processedData2) => 
+//     console.log(`final results of all functions with promises: ${processedData2}`
+//     )
+//     )
+//     .catch((error) => console.log(`Error: ${error}`))
+
+//promise
 
 
+console.log("Start")
+
+function getUserDataFromDB(name){
+   return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Getting User Name...")
+            resolve(name)
+        }, 2000);
+    })
+}
+
+function getUserHobbies(){
+   return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("Getting User hobbies...")
+          resolve(["football", "tennis", "running"])
+        }, 2000);
+    })
+}
+getUserDataFromDB("pikachu").then((name) => getUserHobbies(name)).then((hobby)  => console.log(hobby)).catch(err => console.log(err))
 
 
-
-
-
-
-
-
+console.log("End")
 
 
 
