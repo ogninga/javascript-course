@@ -787,30 +787,195 @@
 //promise
 
 
-console.log("Start")
+// console.log("Start")
 
 
-function getUserDataFromDB(name){
-   return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Getting User Name...")
-            resolve(name)
-        }, 2000);
-    })
-}
+// function getUserDataFromDB(name){
+//    return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Getting User Name...")
+//             resolve(name)
+//         }, 2000);
+//     })
+// }
 
-function getUserHobbies(){
-   return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          console.log("Getting User hobbies...")
-          resolve(["football", "tennis", "running"])
-        }, 2000);
-    })
-}
-getUserDataFromDB("pikachu").then((name) => getUserHobbies(name)).then((hobby)  => console.log(hobby)).catch(err => console.log(err))
+// function getUserHobbies(){
+//    return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//           console.log("Getting User hobbies...")
+//           resolve(["football", "tennis", "running"])
+//         }, 2000);
+//     })
+// }
+// getUserDataFromDB("pikachu").then((name) => getUserHobbies(name)).then((hobby)  => console.log(hobby)).catch(err => console.log(err))
 
 
-console.log("End")
+// console.log("End")
+
+
+//async function
+
+
+//await only for async
+
+// function fetchDataFromServer(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("user data retrieved from the server.")
+
+//         }, 4000);
+        
+//     })
+// }
+
+// async function getUserData(){
+//     try{
+//         const data = await fetchDataFromServer()
+//         console.log(data)
+//         console.log("remaining task can be executed here.")
+
+//     } catch(error){
+//         console.log(error)
+//     }
+// }
+
+// getUserData()
+
+
+//refactor previous code.
+
+// function callBackHell() {
+//     return new Promise((resolve) =>{
+//         setTimeout(() => {
+//             const data = "Inside(callbackhell) function"
+//             console.log(data)
+//             resolve(data)
+//         }, 2000);
+//     })
+// }
+
+// function firstFunc(data) {
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const processedData = `${data} - Processed data`
+//             console.log("Inside (firstFunc) function")
+//             resolve(processedData)
+//         }, 2000);
+//     })
+// }
+
+// function secondFunc(data){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const processedData = `${data} - Processed data`
+//             console.log("Inside (second func) function")
+//             resolve(processedData)
+//         }, 1500);
+//     })
+// }
+
+// callBackHell()
+// .then((data) => firstFunc(data))
+// .then((processedData1) => secondFunc(processedData1))
+// .then((processedData2) => 
+//     console.log(`final results of all functions with promises: ${processedData2}`
+//     )
+//     )
+//     .catch((error) => console.log(`Error: ${error}`))
+
+
+// new call back hell with async 
+
+// function callbackHEll(){
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             const data = 'inside (callbackHEll) function'
+//             console.log(data)
+//             resolve(data)
+//         }, 2000);
+        
+//     })
+// }
+
+// function firstFunc(data){
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             const processedData = `${data} - Processed first.`
+//             console.log("inside firstfunc function")
+//             resolve(processedData)
+//         },2000 );
+//     })
+// }
+
+// function secondFunc(data){
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             const processedData = `${data} - Processed second.`
+//             console.log("inside secondfunc function")
+//             resolve(processedData)
+//         },1500 );
+//     })
+// }
+
+// async function processedDataWithAyncAwait(){
+//     try{
+//         const data = await callbackHEll()
+//         const processedData1 = await firstFunc(data)
+//         const processedData2 = await secondFunc(processedData1)
+//         console.log(`final result of all functions with async/await: ${processedData2}`)
+//     }catch (error){
+//         console.log(`Error: ${error}`)
+//     }
+// }
+
+// processedDataWithAyncAwait()
+
+
+
+// refactored 2
+
+// function getUserDataFromDB(name){
+//    return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log("Getting User Name...")
+//             resolve(name)
+//         }, 2000);
+//     })
+// }
+
+// function getUserHobbies(){
+//    return new Promise((resolve) => {
+//         setTimeout(() => {
+//           console.log("Getting User hobbies...")
+//           resolve(["football", "tennis", "running"])
+//         }, 2000);
+//     })
+// }
+
+// async function getUserAndHobbies(){
+//     try{
+//         const name = await getUserDataFromDB("emmanuel")
+//         const hobby = await getUserHobbies(name)
+//         console.log(`name: ${name}, hobbies: ${hobby}`)
+
+//     }catch (error){
+//         console.log(`Error: ${error}`)
+//     }
+// }
+
+// getUserAndHobbies()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
