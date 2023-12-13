@@ -1008,25 +1008,50 @@
 
 //retrieve api from json file.
 
-const result = document.querySelector('.results')
-async function renderData(){
-    try{
-        const response = await fetch('data.json')
-        if(!response.ok) throw Error(response.statusText)
-        const data = await response.json()
-    //result.textContent = data.name
-    result.textContent = data.age
-    console.log(data)
+// const result = document.querySelector('.results')
+// async function renderData(){
+//     try{
+//         const response = await fetch('data.json')
+//         if(!response.ok) throw Error(response.statusText)
+//         const data = await response.json()
+//     //result.textContent = data.name
+//     result.textContent = data.age
+//     console.log(data)
 
-    } catch (error){
-        console.log(error)
-    }
-}
-
-
-renderData()
+//     } catch (error){
+//         console.log(error)
+//     }
+// }
 
 
+// renderData()
+
+//external api retrieve
+
+// const btn = document.querySelector('.btn')
+// btn.addEventListener('click', makeRequest)
+
+// function makeRequest(){
+//     fetch("https://jsonplaceholder.typicode.com/posts").then(
+//         res =>{
+//             if (!res.ok)
+//             new Error(res.statusText)
+//         return res.json()
+//         }
+//     ).then(data => {
+//         // document.querySelector('.id').innerHTML = data.id
+//         // document.querySelector('.title').innerHTML = data.title
+//         // document.querySelector('.body').innerHTML = data.body
+//         let output = document.querySelector('.all-posts')
+//         data.forEach(element => {
+//             output.innerHTML += `
+//             <div> (ID): ${element.id} </div> <br>
+//             <div> (Title): ${element.title} </div><br>
+//             <div> (Body): ${element.body} </div><br>
+//             `
+//         })
+//     }).catch((error) => console.log(error))
+// }
 
 
 
