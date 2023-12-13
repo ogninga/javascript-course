@@ -967,15 +967,44 @@
 
 
 
+//fetch api
 
 
+// console.log(fetch("text.txt"))
 
+//can solve with callback, new promise, or async /await
 
+//text method returns promise 
+//if resolved will retrurn text representation of body 
 
+// fetch("text.txt").then(res => res.text()).then(data => console.log(data)).catch(error => console.log(error))
 
+const result = document.querySelector('.results')
 
+// fetch("text.txt").then((res) => {
+//     if (!res.ok) throw Error(res.statusText)
+//     return res.text()
+// })
+// .then(data => console.log(data))
+// .catch(error => console.log(error))
 
+//refactored with async and await
+// async function renderData(){
+//     try{
+//         const response = await fetch('text.txt')
+//         if(!response.ok) throw Error(response.statusText) // status text is a method, shows true or notfound in the dom.
+//         const data = await response.text()
+//         result.textContent = data
+//     }catch(err){
+//         console.log(err)
+//     }
+   
+// }
+// renderData()
 
+//fetch api promise only rejects when we have a network error(not in other cases).
+
+// console.log(fetch('text.txt'))
 
 
 
