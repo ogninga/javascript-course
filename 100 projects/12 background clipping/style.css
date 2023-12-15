@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.heading {
+  font-size: 10rem;
+  font-weight: 900;
+  background-image: url(https://media.istockphoto.com/id/182480079/photo/rhino-in-profile.jpg?s=1024x1024&w=is&k=20&c=0KOWhv-12Twx7OnZ_rHTCwb9zyYcZ_kbssqSK9DCn2U=);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
