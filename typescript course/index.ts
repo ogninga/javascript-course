@@ -24,3 +24,18 @@
 // any type, can be used to reference any type.
 
 // warning should be used rarely. Overuse of any can lead to untyped code, and make it much harder to catch bugs during development related to type. it is better to use specific types when possible to keep benefits of type checking.
+
+// let neverUse: any = "please dont use";
+// neverUse = 10;
+// neverUse = true;
+// neverUse();
+// neverUse.toUpperCase();
+// console.log(neverUse);
+
+// let color: any = "blue";
+// color = 10;
+// color = true;
+// color()
+// console.log(color);
+
+//dont use any
