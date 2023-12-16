@@ -39,3 +39,23 @@
 // console.log(color);
 
 //dont use any
+
+//function parameters annotations
+//like varibles if you do a type, it will error if it isnt the same type
+//regular function
+
+function addOne(num: number): number {
+  return num + 1;
+}
+
+const res = addOne(10);
+console.log(res);
+
+//arrow func the parameter implicitly has an ANY type. remember that
+
+const double = (x: number, y: number) => x + y;
+
+const rest = double(10, 20);
+console.log(rest);
+
+//typescript will warn you if you provide more or less values than specified
