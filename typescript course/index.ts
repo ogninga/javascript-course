@@ -44,18 +44,35 @@
 //like varibles if you do a type, it will error if it isnt the same type
 //regular function
 
-function addOne(num: number): number {
-  return num + 1;
-}
+// function addOne(num: number): number {
+//   return num + 1;
+// }
 
-const res = addOne(10);
-console.log(res);
+// const res = addOne(10);
+// console.log(res);
 
 //arrow func the parameter implicitly has an ANY type. remember that
 
-const double = (x: number, y: number) => x + y;
+// const double = (x: number, y: number) => x + y;
 
-const rest = double(10, 20);
-console.log(rest);
+// const rest = double(10, 20);
+// console.log(rest);
 
 //typescript will warn you if you provide more or less values than specified
+
+//default params value
+
+//how you default infer in a function.
+// function greet(person = "world") {
+//   return `hello ${person}`;
+// }
+
+// other option
+// function greet(person:string = "world") {
+//     return `hello ${person}`;
+//   }
+
+// const greet1 = greet();
+// console.log(greet1);
+
+//Return annotations (regular)
