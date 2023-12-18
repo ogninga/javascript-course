@@ -93,10 +93,26 @@
 
 //void in typescript doesnt return values
 
-function printMessage(message: string): void {
-  console.log(`this is my message ${message}`);
-}
+// function printMessage(message: string): void {
+//   console.log(`this is my message ${message}`);
+// }
 
-printMessage("hello");
+// printMessage("hello");
 
 //never keyword.
+
+// use cases for the never keyword, a function that always throws an error, a function that has an infitinite loops, or a variable that can never have a value.
+
+// function throwError(msg:string) : never{
+//  throw new Error(msg);
+// }
+
+// function infi():never{
+//     while(true){}
+// }
+// let x = never
+// function neverReturn(): never {
+//   while (true) {}
+// }
+
+// x = neverReturn()
