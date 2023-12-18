@@ -372,17 +372,81 @@
 
 //class properties
 
-class Person {
-  name: string;
-  age: number;
-  //can add readonly, also maybe ?
-  constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age;
-  }
-}
-const person = new Person("john", 22);
+// class Person {
+//   name: string;
+//   age: number;
+//   //can add readonly, also maybe ?
+//   constructor(name: string, age: number) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+// const person = new Person("john", 22);
 
-console.log(person);
+// console.log(person);
 
-//access modifiers
+//access modifiers  only three modifiers, public private protected (doesnt work in javascript.)
+
+// public - can be accessed from anywhere both inside and outside the class
+// private - can only be accessed from inside the class that they are defined in
+// protected - can only be accessed from inside the class that they are defined in and from any child classes that inherit from it.
+
+//example
+
+// class Animal {
+//   public name: string;
+//   private age: number;
+//   protected species: string;
+//   constructor(name: string, age: number, species: string) {
+//     this.name = name;
+//     this.age = age;
+//     this.species = species;
+//   }
+//   public getName() {
+//     return this.name;
+//   }
+
+//   private getAge() {
+//     return this.age;
+//   }
+//   protected getSpecies() {
+//     return this.species;
+//   }
+// }
+
+// class Dog extends Animal {
+//   constructor(name: string, age: number) {
+//     super(name, age, "canine");
+//   }
+//   public getInfo() {
+//     return `name: ${this.name}, age: ${this.age}, species: ${this.species}`;
+//   }
+// }
+
+//example 2
+
+// class Person {
+//   private first: string;
+//   public last: string;
+//   protected age: number;
+
+//   constructor(first: string, last: string, age: number) {
+//     this.first = first;
+//     this.last = last;
+//     this.age = age;
+//   }
+//   getName(): string {
+//     return `${this.first}  ${this.last} Age: ${this.age}`;
+//   }
+// }
+
+// class mySelf extends Person {
+//   constructor(first: string, last: string, age: number) {
+//     super(first, last, age);
+//   }
+// }
+
+// const emm = new mySelf("Emm", "Smith", 22);
+// console.log(emm.getName());
+
+//Getters & Setters
