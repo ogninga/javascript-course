@@ -294,42 +294,63 @@
 
 //Unions denoted with |(or)
 
-let password: string | number = 22;
+// let password: string | number = 22;
 
-type UserInfo = {
-  first: string;
-  last: string;
-  age: number;
-};
-type AccountDetails = {
-  email: string;
-  password: string;
-};
+// type UserInfo = {
+//   first: string;
+//   last: string;
+//   age: number;
+// };
+// type AccountDetails = {
+//   email: string;
+//   password: string;
+// };
 
-let user: UserInfo | AccountDetails = {
-  first: "Sally",
-  last: "Smith",
-  age: 25,
-  email: "<EMAIL>",
-  password: "<PASSWORD>",
-};
-console.log(user);
+// let user: UserInfo | AccountDetails = {
+//   first: "Sally",
+//   last: "Smith",
+//   age: 25,
+//   email: "<EMAIL>",
+//   password: "<PASSWORD>",
+// };
+// console.log(user);
 
 //Literal Types
 
 //Examples
 
 //string literal
-let color: "red" | "blue" | "green";
-color = "red"; //valid
-color = "brone"; //error | invalid
+// let color: "red" | "blue" | "green";
+// color = "red"; //valid
+// color = "brone"; //error | invalid
 
 //number literal
-let num: 1 | 2 | 3 | 4 | 5;
-num = 1; //valid
-num = 9; //error | invalid
+// let num: 1 | 2 | 3 | 4 | 5;
+// num = 1; //valid
+// num = 9; //error | invalid
 
 //boolean literal
-let isDone: true | false;
-isDone = true; //valid
-isDone = false; //invalid
+// let isDone: true | false;
+// isDone = true; //valid
+// isDone = false; //invalid
+
+//Tuples
+
+// let myTuple2: [number, string] = [1, "hello"];
+
+//or
+
+// myTuple2 = [1, "hello"];
+
+// const products: (number | string)[] = [1, "hello", 12];
+
+// console.log(products);
+
+// const games: [string, string, string] = ["pong", "pacman", "tetris"];
+
+//destructuring individual elements
+
+// let myTuple: [string, number] = ["hello", 22];
+// let [first, second] = myTuple;
+// console.log(first);
+// console.log(second);
