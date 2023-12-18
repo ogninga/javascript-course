@@ -291,3 +291,26 @@
 //   password: "<PASSWORD>",
 // };
 // console.log(sally);
+
+//Unions
+
+let password: string | number = 22;
+
+type UserInfo = {
+  first: string;
+  last: string;
+  age: number;
+};
+type AccountDetails = {
+  email: string;
+  password: string;
+};
+
+let user: UserInfo | AccountDetails = {
+  first: "Sally",
+  last: "Smith",
+  age: 25,
+  email: "<EMAIL>",
+  password: "<PASSWORD>",
+};
+console.log(user);
