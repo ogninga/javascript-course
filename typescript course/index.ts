@@ -354,3 +354,18 @@
 // let [first, second] = myTuple;
 // console.log(first);
 // console.log(second);
+
+//Enums
+
+enum WeatherConditions {
+  //if no value is assigned returns index number
+  Sunny = "sunny",
+  Rainy = "rainy",
+  Snowy = "snowy",
+  Windy = "windy",
+}
+
+console.log(WeatherConditions.Rainy);
+
+const currentWeather = WeatherConditions.Rainy;
+console.log(`the current weather is ${currentWeather}`);
