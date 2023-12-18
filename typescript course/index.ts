@@ -183,41 +183,56 @@
 //type aliases
 
 //declare values declare type keyword. instead of let or const, types need uppercaee convention
-type Person = {
-  name: string;
-  age: number;
-};
+// type Person = {
+//   name: string;
+//   age: number;
+// };
 
 //use values in a function
-function printPerson(person: Person) {
-  console.log(person.name);
-  console.log(person.age);
-}
+// function printPerson(person: Person) {
+//   console.log(person.name);
+//   console.log(person.age);
+// }
 
 //place fill values in variables
-const myPerson: Person = {
-  name: "John",
-  age: 25,
-};
+// const myPerson: Person = {
+//   name: "John",
+//   age: 25,
+// };
 
 //Use values in function call.
 
-printPerson(myPerson);
+// printPerson(myPerson);
+
+// type User = {
+//   name: string;
+//   age: number;
+//   location: string;
+// };
+
+// const printUserInfo = (user: User) => {
+//   return `Name: ${user.name}, Age: ${user.age}, Location: ${user.location}`;
+// };
+
+// const resu = printUserInfo({
+//   name: "alexo",
+//   age: 22,
+//   location: "US",
+// });
+
+// console.log(resu);
+
+//optional properties add question mark after declared property if you want the value to be optional.
 
 type User = {
   name: string;
-  age: number;
+  age?: number;
   location: string;
 };
 
-const printUserInfo = (user: User) => {
-  return `Name: ${user.name}, Age: ${user.age}, Location: ${user.location}`;
-};
-
-const resu = printUserInfo({
+const user: User = {
   name: "alexo",
   age: 22,
   location: "US",
-});
-
-console.log(resu);
+};
+console.log(`Name: ${user.name}, Age: ${user.age}, Location: ${user.location}`);
