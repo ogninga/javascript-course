@@ -79,8 +79,24 @@
 
 //regular function
 
-function double(x: number): number {
-  return x * x;
+// function double(x: number): number {
+//   return x * x;
+// }
+
+// const res = double(10);
+// console.log(res);
+
+//arrow func
+
+// const doubl2 = (x: number) => x * x;
+// console.log(doubl2(10));
+
+//void in typescript doesnt return values
+
+function printMessage(message: string): void {
+  console.log(`this is my message ${message}`);
 }
 
-const res = double(10);
+printMessage("hello");
+
+//never keyword.
