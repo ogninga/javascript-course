@@ -450,3 +450,21 @@
 // console.log(emm.getName());
 
 //Getters & Setters
+// class MyClass {
+//   private _myProp: number = 0;
+//   get myProp(): number {
+//     return this._myProp;
+//   }
+
+//   set myProp(value: number) {
+//     this._myProp = value;
+//   }
+// }
+
+// const myInstance = new MyClass();
+
+// console.log(`${myInstance.myProp}`);
+
+// myInstance.myProp = 10;
+
+// console.log(`${myInstance.myProp}`);
