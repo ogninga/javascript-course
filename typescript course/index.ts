@@ -116,3 +116,29 @@
 // }
 
 // x = neverReturn()
+
+//arrays types
+
+//bracket notation [] array type
+
+// const nums: number[] = [1, 2, 3, 4, 5];
+// const str: string[] = ["1, 2, 3, 4, 5,", "two"];
+// console.log(nums);
+
+// const items: string[] = [];
+
+// items.push("one");
+//cant push the wrong data types.
+// console.log(items);
+
+// const numList: number[] = [];
+
+// numList.push(20);
+
+// console.log(numList);
+
+//second flavor of arrays - depreciated not just  deprecated eh, dont use.
+
+// const items: Array<number> = [1, 2, 3];
+
+// console.log(items);
