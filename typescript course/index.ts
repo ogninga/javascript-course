@@ -357,15 +357,32 @@
 
 //Enums
 
-enum WeatherConditions {
-  //if no value is assigned returns index number
-  Sunny = "sunny",
-  Rainy = "rainy",
-  Snowy = "snowy",
-  Windy = "windy",
+// enum WeatherConditions {
+//if no value is assigned returns index number
+//   Sunny = "sunny",
+//   Rainy = "rainy",
+//   Snowy = "snowy",
+//   Windy = "windy",
+// }
+
+// console.log(WeatherConditions.Rainy);
+
+// const currentWeather = WeatherConditions.Rainy;
+// console.log(`the current weather is ${currentWeather}`);
+
+//class properties
+
+class Person {
+  name: string;
+  age: number;
+  //can add readonly, also maybe ?
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
 }
+const person = new Person("john", 22);
 
-console.log(WeatherConditions.Rainy);
+console.log(person);
 
-const currentWeather = WeatherConditions.Rainy;
-console.log(`the current weather is ${currentWeather}`);
+//access modifiers
