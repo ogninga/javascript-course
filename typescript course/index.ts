@@ -292,7 +292,7 @@
 // };
 // console.log(sally);
 
-//Unions
+//Unions denoted with |(or)
 
 let password: string | number = 22;
 
@@ -314,3 +314,22 @@ let user: UserInfo | AccountDetails = {
   password: "<PASSWORD>",
 };
 console.log(user);
+
+//Literal Types
+
+//Examples
+
+//string literal
+let color: "red" | "blue" | "green";
+color = "red"; //valid
+color = "brone"; //error | invalid
+
+//number literal
+let num: 1 | 2 | 3 | 4 | 5;
+num = 1; //valid
+num = 9; //error | invalid
+
+//boolean literal
+let isDone: true | false;
+isDone = true; //valid
+isDone = false; //invalid
