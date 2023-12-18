@@ -76,3 +76,11 @@
 // console.log(greet1);
 
 //Return annotations (regular)
+
+//regular function
+
+function double(x: number): number {
+  return x * x;
+}
+
+const res = double(10);
