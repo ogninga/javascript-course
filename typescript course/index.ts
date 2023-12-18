@@ -224,15 +224,70 @@
 
 //optional properties add question mark after declared property if you want the value to be optional.
 
-type User = {
-  name: string;
-  age?: number;
-  location: string;
-};
+//also readonly property. makes the property read only to where the value cannot be changed.
 
-const user: User = {
-  name: "alexo",
-  age: 22,
-  location: "US",
-};
-console.log(`Name: ${user.name}, Age: ${user.age}, Location: ${user.location}`);
+// type User = {
+//   name: string;
+//   age?: number;
+//   location: string;
+//   readonly id: number; // like for ids is a good use case.
+// };
+
+// const user: User = {
+//   name: "alexo",
+//   age: 22,
+//   location: "US",
+//   id: 1,
+// };
+// console.log(`Name: ${user.name}, Age: ${user.age}, Location: ${user.location}`);
+
+//intersection types
+
+//declare all values in an object
+
+// type Person = {
+//   name: string;
+//   age: number;
+// };
+
+// type employee = {
+//   id: number;
+//   title: string;
+// };
+
+//make new object that combines both together.
+// type personAndEmployee = Person & employee;
+
+//use both objects as a data type, and put that in a new object.
+// const bob: personAndEmployee = {
+//   name: "bob",
+//   age: 25,
+//   id: 1,
+//   title: "manager",
+// };
+// see results.
+// console.log(bob);
+
+// example 2
+
+// type UserInfo = {
+//   first: string;
+//   last: string;
+//   age: number;
+// };
+
+// type AccountDetails = {
+//   username: string;
+//   password: string;
+// };
+
+// type UserAndAccount = UserInfo & AccountDetails;
+
+// const sally: UserAndAccount = {
+//   first: "Sally",
+//   last: "Smith",
+//   age: 25,
+//   username: "SallySmith",
+//   password: "<PASSWORD>",
+// };
+// console.log(sally);
