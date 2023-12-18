@@ -145,13 +145,37 @@
 
 //multi dimensional arrays call it with two pairs of brackets [][]
 
-const singleDi: number[] = [1, 2, 3, 4, 5];
-const multiDi: number[][] = [
-  [1, 2, 3],
-  [4, 5, 6],
-];
-const tripleDi: number[][][] = [[[1, 2, 3, 4, 5]]];
+// const singleDi: number[] = [1, 2, 3, 4, 5];
+// const multiDi: number[][] = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+// ];
+// const tripleDi: number[][][] = [[[1, 2, 3, 4, 5]]];
 
-console.log(singleDi);
-console.log(multiDi);
-console.log(tripleDi);
+// console.log(singleDi);
+// console.log(multiDi);
+// console.log(tripleDi);
+
+//objects syntax  type varName (annotation/types) = {property:value}
+//my guess number : guessingIt (string) = {name: 'john'}
+
+//must declare all properties with a value
+
+// const person: { firstName: string; lastName: string; age: number } = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 25,
+// };
+// console.log(`Name: ${person.firstName} ${person.lastName}, Age: ${person.age}`);
+// function
+
+// function printUser(): { name: string; age: number; location: string } {
+//   return {
+//     name: "john",
+//     age: 25,
+//     location: "NY",
+//   };
+// }
+
+// const res = printUser();
+// console.log(res);
