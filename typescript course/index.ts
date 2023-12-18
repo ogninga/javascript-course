@@ -142,3 +142,16 @@
 // const items: Array<number> = [1, 2, 3];
 
 // console.log(items);
+
+//multi dimensional arrays call it with two pairs of brackets [][]
+
+const singleDi: number[] = [1, 2, 3, 4, 5];
+const multiDi: number[][] = [
+  [1, 2, 3],
+  [4, 5, 6],
+];
+const tripleDi: number[][][] = [[[1, 2, 3, 4, 5]]];
+
+console.log(singleDi);
+console.log(multiDi);
+console.log(tripleDi);
