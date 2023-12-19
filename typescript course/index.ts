@@ -613,20 +613,47 @@
 
 //
 
-interface Vehicle {
+// interface Vehicle {
+//   start(): void;
+//   stop(): void;
+// }
+
+// class Car implements Vehicle {
+//   start() {
+//     console.log("car started");
+//   }
+//   stop() {
+//     console.log("car stopped");
+//   }
+// }
+
+// const myCar = new Car();
+// myCar.start();
+// myCar.stop();
+
+//Declaration merging
+
+//Original interface
+interface Car {
+  brand: string;
   start(): void;
+}
+
+//Declaration merging (interface extension)
+interface Car {
+  model: string;
   stop(): void;
 }
 
-class Car implements Vehicle {
+const myCar: Car = {
+  brand: "Ford",
+  model: "Mustang",
   start() {
     console.log("car started");
-  }
+  },
   stop() {
     console.log("car stopped");
-  }
-}
+  },
+};
 
-const myCar = new Car();
 myCar.start();
-myCar.stop();
