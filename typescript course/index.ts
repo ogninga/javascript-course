@@ -468,3 +468,165 @@
 // myInstance.myProp = 10;
 
 // console.log(`${myInstance.myProp}`);
+
+//interface
+//basic interface
+// interface Person {
+//   firstName: string;
+//   lastName: string;
+//   age: number;
+// }
+//usage
+
+// const examplePerson: Person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 22,
+// };
+
+//interface for a function
+// interface MathOperation {
+//   (x: number, y: number): number;
+// }
+
+//usage
+// const add: MathOperation = (a, b) => a + b;
+// const subtract: MathOperation = (a, b) => a - b;
+
+// console.log(add(10, 20));
+// console.log(subtract(10, 20));
+
+//interface for classes
+
+// interface Vehicle {
+//   start(): void;
+//   stop(): void;
+// }
+
+//class implement the interface
+
+// class Car implements Vehicle {
+//   start() {
+//     console.log("car started");
+//   }
+//   stop() {
+//     console.log("car stopped");
+//   }
+// }
+
+//usage
+
+// const myCar = new Car();
+// myCar.start();
+// myCar.stop();
+
+// more examples can put ? or readonly
+
+// interface Computer {
+//   name: string;
+//   ram: number;
+//   hdd: number;
+// }
+
+// const computerExample: Computer = {
+//   name: "Macbook",
+//   ram: 16,
+//   hdd: 512,
+// };
+// console.log(computerExample.name);
+
+//
+
+// interface MathIt {
+//   (x: number, y: number): number;
+// }
+
+// const addIt: MathIt = (a, b) => a + b;
+// console.log(addIt(10, 20));
+//
+
+// interface Person {
+//   firstName: string;
+//   lastName: string;
+//   age: number;
+//   sayHello(): void;
+// }
+
+// function greet(person: Person) {
+//   console.log(`Hello ${person.firstName} ${person.lastName} ${person.age}`);
+//   person.sayHello();
+// }
+
+// const john: Person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 22,
+//   sayHello() {
+//     console.log("Hello!");
+//   },
+// };
+
+// console.log(john);
+//
+// interface Song {
+//   songName: string;
+//   singerName: string;
+//   printSongInfo(songName: string, singerName: string): string;
+// }
+
+// const song1: Song = {
+//   songName: "hello",
+//   singerName: "john",
+//   printSongInfo: (songName, singerName) => {
+//     return `${songName} by ${singerName}`;
+//   },
+// };
+// console.log(song1.printSongInfo("hello", "john"));
+
+//borrow interfaces
+
+// interface MovieDetails {
+//   readonly name: string;
+//   ratings: number;
+//   printMovieInfo(name: string, price: number, ratings: number): string | number;
+// }
+
+// interface MovieGenre extends MovieDetails {
+//   genre: string;
+// }
+
+// const movie1: MovieGenre = {
+//   name: "The Godfather",
+//   genre: "Drama",
+//   ratings: 5,
+//   printMovieInfo(
+//     name: string,
+//     price: number,
+//     ratings: number
+//   ): string | number {
+//     return `Movie name: ${name}, price: ${price}, ratings: ${ratings}`;
+//   },
+// };
+
+// const res = movie1.printMovieInfo("The Godfather", 10, 5);
+// console.log(res);
+
+//
+
+interface Vehicle {
+  start(): void;
+  stop(): void;
+}
+
+class Car implements Vehicle {
+  start() {
+    console.log("car started");
+  }
+  stop() {
+    console.log("car stopped");
+  }
+}
+
+const myCar = new Car();
+myCar.start();
+myCar.stop();
