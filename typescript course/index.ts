@@ -640,20 +640,101 @@ interface Car {
 }
 
 //Declaration merging (interface extension)
-interface Car {
-  model: string;
-  stop(): void;
+// interface Car {
+//   model: string;
+//   stop(): void;
+// }
+
+// const myCar: Car = {
+//   brand: "Ford",
+//   model: "Mustang",
+//   start() {
+//     console.log("car started");
+//   },
+//   stop() {
+//     console.log("car stopped");
+//   },
+// };
+
+// myCar.start();
+
+//Generics
+
+//normal function
+// function printNumber(item: number, defaultValue: number): [number, number] {
+//   return [item, defaultValue];
+// }
+
+// function printString(item: string, defaultValue: string): [string, string] {
+//   return [item, defaultValue];
+// }
+
+// function printBool(item: boolean, defaultValue: boolean): [boolean, boolean] {
+//   return [item, defaultValue];
+// }
+
+// const num = printNumber(10, 20);
+// const str = printString("hello", "world");
+// const bool = printBool(true, false);
+
+// console.log(num);
+// console.log(str);
+// console.log(bool);
+
+// function printNumber(item: any, defaultValue: any): [any, any] {
+//   return [item, defaultValue];
+// }
+
+// const num = printNumber(10, "chicken");
+// console.log(num);
+
+//generic function type refactored.
+
+//------------------------
+
+// function uniqueDataTypesFunc<Type>(
+//   item: Type,
+//   defaultValue: Type
+// ): [Type, Type] {
+//   return [item, defaultValue];
+// }
+
+// const res = uniqueDataTypesFunc<number>(10, 20);
+// const str = uniqueDataTypesFunc<string>("10, 20", "wood");
+// const bool = uniqueDataTypesFunc<boolean>(true, false);
+// console.log(res);
+
+//using an interface with a generic function.
+// function uniqueDataTypesFunc<T>(item: T, defaultValue: T): [T, T] {
+//   return [item, defaultValue];
+// }
+
+// interface Dog {
+//   name: string;
+//   breed: string;
+// }
+
+// const dog1 = uniqueDataTypesFunc<Dog>(
+//   { name: "buddy", breed: "labrador" },
+//   { name: "default", breed: "unkown" }
+// );
+
+// console.log(dog1);
+
+//example two
+
+function getRandomKeyValuePair<T>(obj: {
+  [key: string]: T;
+}): { key: string; value: T } {
+  const keys = Object.keys(obj);
+  const randKey = keys[Math.floor(Math.random() * keys.length)];
+  return { key: randKey, value: obj[randKey] };
 }
 
-const myCar: Car = {
-  brand: "Ford",
-  model: "Mustang",
-  start() {
-    console.log("car started");
-  },
-  stop() {
-    console.log("car stopped");
-  },
-};
+const stringObject = { a: "apple", b: "banana", c: "cherry" };
+const res = getRandomKeyValuePair<string>(stringObject);
+console.log(res);
 
-myCar.start();
+const numberObject = { one: 1, two: 2, three: 3 };
+const res2 = getRandomKeyValuePair<number>(numberObject);
+console.log(res2);
