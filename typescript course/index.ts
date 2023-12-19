@@ -723,18 +723,18 @@ interface Car {
 
 //example two
 
-function getRandomKeyValuePair<T>(obj: {
-  [key: string]: T;
-}): { key: string; value: T } {
-  const keys = Object.keys(obj);
-  const randKey = keys[Math.floor(Math.random() * keys.length)];
-  return { key: randKey, value: obj[randKey] };
-}
+// function getRandomKeyValuePair<T>(obj: {
+//   [key: string]: T;
+// }): { key: string; value: T } {
+//   const keys = Object.keys(obj);
+//   const randKey = keys[Math.floor(Math.random() * keys.length)];
+//   return { key: randKey, value: obj[randKey] };
+// }
 
-const stringObject = { a: "apple", b: "banana", c: "cherry" };
-const res = getRandomKeyValuePair<string>(stringObject);
-console.log(res);
+// const stringObject = { a: "apple", b: "banana", c: "cherry" };
+// const res = getRandomKeyValuePair<string>(stringObject);
+// console.log(res);
 
-const numberObject = { one: 1, two: 2, three: 3 };
-const res2 = getRandomKeyValuePair<number>(numberObject);
-console.log(res2);
+// const numberObject = { one: 1, two: 2, three: 3 };
+// const res2 = getRandomKeyValuePair<number>(numberObject);
+// console.log(res2);
