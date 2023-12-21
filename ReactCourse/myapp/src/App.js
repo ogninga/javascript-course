@@ -22,17 +22,28 @@
 
 // export default App;
 
-import Add from "./components/Add";
-import Greetings from "./components/greetings";
+// import Add from "./components/Add";
+// import Greetings from "./components/greetings";
 
 // import { Fragment } from "react";
 // can use <> </> as a fragment as well.
 function App() {
+  const myName = "emmanuel";
+  const multiply = (a, b) => a * b;
+  const specialClass = "simple class";
   return (
     <>
-      <Greetings />
-      <Add />
+      <h1>{myName}</h1>
+      <p>2 * 4 = {2 * 4}</p>
+      <p>My Firends List: {["alex", "john", "fuby"]}</p>
+      <p>2 * 2 = {multiply(2, 2)}</p>
+      <p className={specialClass}>a special class</p>
     </>
+
+    // <>
+    //   { fragments/* <Greetings />
+    //   <Add /> */}
+    // </>
   );
 }
 
