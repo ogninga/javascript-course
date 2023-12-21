@@ -1,0 +1,145 @@
+****************************
+
+
+**********
+
+
+
+
+
+
+
+
+
+
+
+
+*****************************
+Lists continued
+*******************************
+
+The code defines a functional component named App.
+Inside the component, there's an array called userInfo, containing objects with user information (username, email, and location).
+The component returns JSX (React elements) using the fragment syntax (<> ... </>).
+It utilizes the map function to iterate over each object in the userInfo array.
+For each user object, it generates a <ul> (unordered list) element with a unique key attribute.
+Inside each <ul> element, it generates three <li> (list item) elements to display the user's username, email, and location.
+The values for each user are dynamically inserted using JSX curly braces {}.
+The key attribute for each <ul> element is set to a random value generated using Math.random() to help React efficiently update and manage the list.
+The entire JSX is wrapped in a fragment (<> ... </>) to avoid unnecessary parent elements in the DOM.
+The component is exported as the default export (export default App;), making it available for use in other parts of the application.
+In summary, the App component maps over an array of user information, creating a list of unordered lists where each list item displays details about a user (username, email, and location). The unique key attribute helps React efficiently handle updates in the list.
+
+
+
+
+
+
+
+
+function App() {
+  const userInfo = [
+    {
+      username: "Leslie",
+      email: "test@gmail.com",
+      location: "UK",
+    },
+    {
+      username: "pookie",
+      email: "test@gmail.com",
+      location: "Uganda",
+    },
+    {
+      username: "ray ray",
+      email: "test@gmail.com",
+      location: "Usa",
+    },
+  ];
+
+  return (
+    <>
+      {userInfo.map((user) => (
+        <ul key={Math.random() * 10}>
+          <li>{user.username}</li>
+          <li>{user.email}</li>
+          <li>{user.location}</li>
+        </ul>
+      ))}
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+***********************************
+
+
+
+
+// import { Component } from "react";
+// class App extends Component {
+//   //to show content on the screen
+//   render() {
+//     return <h1>Hello Boogey bads</h1>;
+//   }
+// }
+
+// function App() {
+//   return (
+//     // using className not class to style html
+//     // <h1 className="title-class">Title</h1>
+//     //htmlFor instead of for
+//     // <form>
+
+//     //   <label htmlFor="name">Name</label>
+//     //   <input type="text" id="name" />
+//     // </form>
+
+// );
+// }
+
+// export default App;
+
+// import Add from "./components/Add";
+// import Greetings from "./components/greetings";
+
+// import { Fragment } from "react";
+// can use <> </> as a fragment as well.
+function App() {
+  // const myName = "emmanuel";
+  // const multiply = (a, b) => a * b;
+  // const specialClass = "simple class";
+
+  //Example #1
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  return (
+    <>
+      {/* if you want to return value use {}with return if not use () if no value is desired. */}
+      {numbers.map((number) => (
+        // always need a key if using a list of elements
+        <ul key={Math.random() * 10}>
+          <li>{number}</li>
+        </ul>
+      ))}
+    </>
+    // <>
+    //   <h1>{myName}</h1>
+    //   <p>2 * 4 = {2 * 4}</p>
+    //   <p>My Firends List: {["alex", "john", "fuby"]}</p>
+    //   <p>2 * 2 = {multiply(2, 2)}</p>
+    //   <p className={specialClass}>a special class</p>
+    // </>
+
+    // <>
+    //   { fragments/* <Greetings />
+    //   <Add /> */}
+    // </>
+  );
+}
