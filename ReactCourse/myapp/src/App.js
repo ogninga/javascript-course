@@ -25,13 +25,14 @@
 import Add from "./components/Add";
 import Greetings from "./components/greetings";
 
+// import { Fragment } from "react";
+// can use <> </> as a fragment as well.
 function App() {
   return (
-    <section>
-      <Add />
+    <>
       <Greetings />
       <Add />
-    </section>
+    </>
   );
 }
 
