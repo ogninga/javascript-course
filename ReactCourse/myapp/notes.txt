@@ -2,8 +2,96 @@
 
 Conditional Rendering
 **********
+#3 terneary operator
+
+const ValidPassword = () => <h1>Valid Password</h1>;
+const InvalidPassword = () => <h1>Invalid Password</h1>;
+
+const Password = (isValid) => {
+  // if (isValid) {
+  //   return <ValidPassword />;
+  // } else {
+  //   return <InvalidPassword />;
+  // }
+
+  return isValid ? <ValidPassword /> : <InvalidPassword />;
+};
+
+function App() {
+  return (
+    <>
+      <Password isValid={true} />
+    </>
+  );
+}
+
+export default App;
 
 
+
+
+
+
+
+
+
+
+********************
+#2 &&
+
+
+const Cart = () => {
+  const items = ["wireless earbuds", "headphones", "laptop", "camera", "phone"];
+
+  return (
+    <>
+      <h1>Cart</h1>
+      {items.length > 0 && <h2>You have {items.length} items in your cart</h2>}
+
+      <ul>
+        <h4>products</h4>
+        {items.map((item) => (
+          <li key={Math.random()}>{item}</li>
+        ))}
+      </ul>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <>
+      <Cart />
+    </>
+  );
+}
+
+export default App;
+
+
+***************
+#1 if statement
+
+const ValidPassword = () => <h1>Valid Password</h1>;
+const InvalidPassword = () => <h1>Invalid Password</h1>;
+
+const Password = (isValid) => {
+  if (isValid) {
+    return <ValidPassword />;
+  } else {
+    return <InvalidPassword />;
+  }
+};
+
+function App() {
+  return (
+    <>
+      <Password isValid={true} />
+    </>
+  );
+}
+
+export default App;
 
 
 
