@@ -1,3 +1,242 @@
+*****************************
+forms
+***************************
+import { useState } from "react";
+
+function App() {
+  const [username, setUsername] = useState("");
+
+  const handleChange = (event) => {
+    setUsername(event.target.value);
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`You typed: ${username}`);
+    setUsername("");
+  };
+
+  return (
+    <>
+      <h1>Form Demo</h1>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={username} onChange={handleChange} />
+        <button>submit</button>
+      </form>
+    </>
+  );
+}
+
+export default App;
+
+
+
+*********************************
+States
+*****************************
+#4 array states
+import { useState } from "react";
+
+function App() {
+  const [movies, setMovie] = useState([
+    { id: 1, title: "spiderman", ratings: 3 },
+    { id: 2, title: "superman", ratings: 6 },
+  ]);
+
+  const handleClick = () => {
+    setMovie(
+      movies.map((m) => (m.id === 1 ? { ...movies, title: "john wick 4" } : m))
+    );
+  };
+
+  return (
+    <>
+      {movies.map((movie) => (
+        <li key={Math.random()}>{movie.title}</li>
+      ))}
+      <button onClick={handleClick}>Change Name</button>
+    </>
+  );
+}
+
+export default App;
+
+#3 change objects of states
+import { useState } from "react";
+
+function App() {
+  const [movie, setMovie] = useState({
+    title: "Equlizer 3",
+    rating: 7,
+  });
+
+  const handleClick = () => {
+    const copyMovie = {
+      ...movie,
+      rating: 5,
+    };
+    setMovie(copyMovie);
+  };
+
+  return (
+    <>
+      <h1>{movie.title}</h1>
+      <p>{movie.rating}</p>
+      <button onClick={handleClick}>Change Rating</button>
+    </>
+  );
+}
+
+export default App;
+
+#2 change array of states import { useState } from "react";
+
+function App() {
+  const [friends, setFriends] = useState(["Alex", "John"]);
+  const addOne = () => {
+    setFriends([...friends, "Billy"]);
+  };
+  const removeOne = () => {
+    setFriends(friends.filter((f) => f !== "Alex"));
+  };
+  const updateOne = () => {
+    setFriends(friends.map((f) => (f === "Alex" ? "Alex Smith" : f)));
+  };
+  return (
+    <>
+      {friends.map((f) => (
+        <li key={Math.random()}>{f}</li>
+      ))}
+      <button onClick={addOne}>Add One</button>
+      <button onClick={removeOne}>Remove One</button>
+      <button onClick={updateOne}>Update One</button>
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+#1 import { useState } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+  return (
+    <>
+      <h1>{count}</h1>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <>
+      <Counter />
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+***************************************
+Event listener
+*****************************
+#3 const Move = () => {
+  const moveHandler = () => {
+    alert("ouch!");
+  };
+  return (
+    <>
+      <p onMouseMove={moveHandler}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam ratione
+        corrupti sunt quae excepturi magni delectus dicta iure rem accusantium!
+      </p>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <>
+      <Move />
+    </>
+  );
+}
+
+export default App;
+#2 const Copy = () => {
+  const copyHandler = () => {
+    alert("stop it biyatch");
+  };
+  return (
+    <>
+      <p onCopy={copyHandler}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quibusdam
+        corrupti voluptatem reprehenderit eveniet veniam, unde labore eum nobis
+        itaque ullam qui dolorum ipsum placeat ratione! Consequatur saepe ipsa
+        dolores.
+      </p>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <>
+      <Copy />
+    </>
+  );
+}
+#1 //need the arrow function before handle click in order for the action not to run before the function runs.
+
+const Button = () => {
+  const handleClick = (a, b) => {
+    console.log(a + b);
+  };
+  return <button onClick={()=>handleClick(2,2)}> Click</button>;
+};
+function App() {
+  return (
+    <>
+      <Button />
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *************************************
 Icons
 ******************************
