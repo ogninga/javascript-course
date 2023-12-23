@@ -1,24 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [username, setUsername] = useState("");
+  const [value, setValue] = useState(0);
 
-  const handleChange = (event) => {
-    setUsername(event.target.value);
-  };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(`You typed: ${username}`);
-    setUsername("");
-  };
+  useEffect(() => {
+    console.log("Hello");
+    document.title = `increment(${value})`;
+  }, [value]);
 
   return (
     <>
-      <h1>Form Demo</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={username} onChange={handleChange} />
-        <button>submit</button>
-      </form>
+      <h1>{value}</h1>
+      <button onClick={() => setValue(value + 1)}>Click Me</button>
     </>
   );
 }
