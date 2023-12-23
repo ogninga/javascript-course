@@ -1,3 +1,99 @@
+*************************************
+Icons
+******************************
+
+import { BsFillCartCheckFill, BsGithub } from "react-icons/bs";
+
+import "./index.css";
+
+function App() {
+  return (
+    <>
+      <BsFillCartCheckFill />
+      <BsGithub />
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+****************************
+
+ways to apply styling
+**********
+#3import "./index.css";
+
+function App() {
+  return (
+    <>
+      <h1>Hello I am React</h1>
+    </>
+  );
+}
+
+export default App;
+
+
+***************************
+#2 stylingfunction App() {
+  const difsty = {
+    color: "red",
+    backgroundColor: "orange",
+  };
+  return (
+    <>
+      <h1
+        style={{ color: difsty.color, backgroundColor: difsty.backgroundColor }}
+      >
+        Hello I am React
+      </h1>
+    </>
+  );
+}
+
+export default App;
+
+******************
+#1 styling
+
+function App() {
+  return (
+    <>
+      <h1 style={{ color: "blue", backgroundColor: "green" }}>
+        Hello I am React
+      </h1>
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ****************************
 
 Conditional Rendering

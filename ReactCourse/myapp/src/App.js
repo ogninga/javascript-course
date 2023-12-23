@@ -1,20 +1,12 @@
-const ValidPassword = () => <h1>Valid Password</h1>;
-const InvalidPassword = () => <h1>Invalid Password</h1>;
+import { BsFillCartCheckFill, BsGithub } from "react-icons/bs";
 
-const Password = (isValid) => {
-  // if (isValid) {
-  //   return <ValidPassword />;
-  // } else {
-  //   return <InvalidPassword />;
-  // }
-
-  return isValid ? <ValidPassword /> : <InvalidPassword />;
-};
+import "./index.css";
 
 function App() {
   return (
     <>
-      <Password isValid={true} />
+      <BsFillCartCheckFill />
+      <BsGithub />
     </>
   );
 }
