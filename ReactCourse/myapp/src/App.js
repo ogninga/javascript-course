@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
-
+import { useRef } from "react";
 function App() {
-  const [value, setValue] = useState(0);
+  const inputElement = useRef(null);
 
-  useEffect(() => {
-    console.log("Hello");
-    document.title = `increment(${value})`;
-  }, [value]);
+  const focusInput = () => {
+    inputElement.current.focus();
+    inputElement.current.value = "pooty";
+  };
 
   return (
     <>
-      <h1>{value}</h1>
-      <button onClick={() => setValue(value + 1)}>Click Me</button>
+      <input type="text" ref={inputElement} />
+      <button onClick={() => focusInput()}>Focus & Write pooty</button>
     </>
   );
 }
